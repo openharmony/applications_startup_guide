@@ -1,0 +1,39 @@
+{
+    "string":[
+        {
+            "name":"outerpage_tips",
+            "value":"Разложите телефон, чтобы продолжить",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"cancel",
+            "value":"Отмена",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"exit",
+            "value":"Выйти",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"exit_dialog_tips",
+            "value":"Выйти?",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"hwstartguide_title",
+            "value":"Мастер запуска",
+            "attr":{
+                "priority":"LT"
+            }
+        }
+    ]
+}

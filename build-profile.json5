@@ -1,0 +1,78 @@
+{
+  "app": {
+    "signingConfigs": [
+      {
+        "name": "default",
+        "material": {
+          "storeFile": "hw_sign/OpenHarmony.p12",
+          "storePassword": "00000016676A7176E76EFF87F44288205ABA8C8B6698B1102B5028DA1A149F03B588DA140A78",
+          "keyAlias": "OpenHarmony Application Release",
+          "keyPassword": "00000016CBEF89E0DEC707F2B0C047C3868DCF5E40603C79597773CE580CAA2E8864C30376D5",
+          "signAlg": "SHA256withECDSA",
+          "profile": "hw_sign/hwstartupguide.p7b",
+          "certpath": "hw_sign/OpenHarmony.cer"
+        }
+      }
+    ],
+    "products": [
+      {
+        "name": "default",
+        "signingConfig": "default",
+        "compileSdkVersion": 23,
+        "compatibleSdkVersion": 20,
+        "runtimeOS": "OpenHarmony",
+        "targetSdkVersion": 20
+      }
+    ]
+  },
+  "modules": [
+    {
+      "name": "phone_startupguide",
+      "srcPath": "./product/phone",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "hwstartupguide.common",
+      "srcPath": "./common"
+    },
+    {
+      "name": "hwstartupguide.basicservice",
+      "srcPath": "./feature/basicservice"
+    },
+    {
+      "name": "hwstartupguide.enhanceservice",
+      "srcPath": "./feature/enhanceservice"
+    },
+    {
+      "name": "hwstartupguide.regionselect",
+      "srcPath": "./feature/regionselect"
+    },
+    {
+      "name": "hwstartupguide.languageselect",
+      "srcPath": "./feature/languageselect"
+    },
+    {
+      "name": "hwstartupguide.experience",
+      "srcPath": "./feature/experience",
+    },
+    {
+      "name": "hwstartupguide.welcome",
+      "srcPath": "./feature/welcome",
+    },
+    {
+      "name": "hwstartupguide.upgradeguide",
+      "srcPath": "./feature/upgradeguide",
+    },
+    {
+      "name": "hwstartupguide.otaservice",
+      "srcPath": "./feature/otaservice",
+    }
+  ]
+}

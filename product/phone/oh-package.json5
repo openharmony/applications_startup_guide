@@ -1,0 +1,19 @@
+{
+  "license": "ISC",
+  "devDependencies": {},
+  "name": "phone_startupguide",
+  "description": "example description",
+  "repository": {},
+  "version": "1.0.0",
+  "dependencies": {
+    "@ohos/hwstartupguide.enhanceservice": "file:../../feature/enhanceservice",
+    "@ohos/hwstartupguide.common": "file:../../common",
+    "@ohos/hwstartupguide.basicservice": "file:../../feature/basicservice",
+    "@ohos/hwstartupguide.languageselect": "file:../../feature/languageselect",
+    "@ohos/hwstartupguide.experience": "file:../../feature/experience",
+    "@ohos/hwstartupguide.welcome": "file:../../feature/welcome",
+    "@ohos/hwstartupguide.regionselect": "file:../../feature/regionselect",
+    "@ohos/hwstartupguide.upgradeguide": "file:../../feature/upgradeguide",
+    "@ohos/hwstartupguide.otaservice": "file:../../feature/otaservice"
+  }
+}

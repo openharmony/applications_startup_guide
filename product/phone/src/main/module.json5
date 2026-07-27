@@ -1,0 +1,157 @@
+{
+  "module": {
+    "name": "phone_startupguide",
+    "type": "entry",
+    "srcEntrance": "./ets/Application/AbilityStage.ets",
+    "description": "$string:hwstartguide_title",
+    "mainElement": "com.ohos.startupguide.MainAbility",
+    "deviceTypes": [
+      "default"
+      // Legacy: "phone", "tablet"
+    ],
+    "deliveryWithInstall": true,
+    "installationFree": false,
+    "pages": "$profile:main_pages",
+    "metadata": [
+      {
+        "name": "ArkTSPartialUpdate",
+        "value": "true"
+      },
+      {
+        "name": "partialUpdateStrictCheck",
+        "value": "warn"
+      },
+      {
+        "name": "license_file_path",
+        "value": "/system/etc/noticeFile/HwStartupGuide_OpenSource.html"
+      }
+    ],
+    "abilities": [
+      {
+        "excludeFromMissions": true,
+        "removeMissionAfterTerminate": true,
+        "name": "com.ohos.startupguide.MainAbility",
+        "srcEntry": "./ets/ability/GuideHomeAbility.ets",
+        "description": "$string:hwstartguide_title",
+        "icon": "$media:app_icon",
+        "label": "$string:hwstartguide_title",
+        "orientation": "auto_rotation_restricted",
+        "startWindowIcon": "$media:background",
+        "startWindowBackground": "$color:start_window_background",
+        "visible": false,
+        // NOTE: 不再注册 entity.system.home / action.system.home。
+        // 本设备为 SceneBoard 模式，由 SceneBoard(SCBOobeManager) 显式拉起 OOBE；
+        // 若声明系统桌面会抢占开机 home 槽位导致 SceneBoard 不启动、scb 不存在而卡开机。
+        "skills": [
+          {
+            "actions": [
+              "collaborationFwk.Service.Register"
+            ]
+          }
+        ]
+      }
+    ],
+    "requestPermissions": [
+      {
+        "name":"ohos.permission.ACCESS_BLUETOOTH",
+        "reason": "$string:hwstartguide_title",
+        "usedScene": {
+          "abilities": [
+            "GuideHomeAbility"
+          ],
+          "when":"inuse"
+        }
+      },
+      {
+        "name": "ohos.permission.LAUNCH_DATA_PRIVACY_CENTER"
+      },
+      {
+        "name": "ohos.permission.GET_BUNDLE_INFO"
+      },
+      {
+        "name": "ohos.permission.CHANGE_ABILITY_ENABLED_STATE"
+      },
+      {
+        "name": "ohos.permission.START_INVISIBLE_ABILITY"
+      },
+      {
+        "name": "ohos.permission.MANAGE_SECURE_SETTINGS"
+      },
+      {
+        "name": "ohos.permission.MANAGE_LOCAL_ACCOUNTS"
+      },
+      {
+        "name": "ohos.permission.START_ABILITIES_FROM_BACKGROUND"
+      },
+      {
+        "name": "ohos.permission.UPDATE_MIGRATE"
+      },
+      {
+        "name": "ohos.permission.ACCESS_OUC"
+      },
+      {
+        "name": "ohos.permission.ACCESS_BIOMETRIC"
+      },
+      {
+        "name": "ohos.permission.UPDATE_CONFIGURATION"
+      },
+      {
+        "name": "ohos.permission.ACCESS_ACCOUNT_KIT_UI"
+      },
+      {
+        "name": "ohos.permission.ACCESS_HIVIEWX"
+      },
+      {
+        "name": "ohos.permission.ALLOW_UPGRADE_GUIDE_ACCESS"
+      },
+      {
+        "name": "ohos.permission.REBOOT"
+      },
+      {
+        "name": "ohos.permission.GET_NETWORK_INFO"
+      },
+      {
+        "name": "ohos.permission.MANAGE_SETTINGS"
+      },
+      {
+        "name": "ohos.permission.ACCESS_SYSTEM_SETTINGS"
+      },
+      {
+        "name": "ohos.permission.READ_FINDSERVICE"
+      },
+      {
+        "name": "ohos.permission.USE_CLOUD_COMMON_SERVICE"
+      },
+      {
+        "name": "ohos.permission.ACCESS_IDM_WIDGET"
+      },
+      {
+        "name": "ohos.permission.ACCESS_STARTUPGUIDE"
+      },
+      {
+        "name": "ohos.permission.WRITE_IMAGEVIDEO",
+        "reason": "$string:hwstartguide_title",
+        "usedScene": {
+          "abilities": [
+            "GuideHomeAbility"
+          ],
+          "when": "inuse"
+        }
+      },
+      {
+        "name": "ohos.permission.CALLED_BELOW_LOCK_SCREEN"
+      },
+      {
+        "name": "ohos.permission.ACCESS_EXTENSIONAL_DEVICE_DRIVER"
+      },
+      {
+        "name": "ohos.permission.STORAGE_MANAGER"
+      }
+    ],
+    "definePermissions": [
+      {
+        "name": "ohos.permission.ACCESS_STARTUPGUIDE"
+      }
+    ]
+  }
+}

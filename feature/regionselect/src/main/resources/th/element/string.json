@@ -1,0 +1,18 @@
+{
+    "string":[
+        {
+            "name":"region_select",
+            "value":"เลือกภูมิภาค",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"continue",
+            "value":"ดำเนินการต่อ",
+            "attr":{
+                "priority":"LT"
+            }
+        }
+    ]
+}

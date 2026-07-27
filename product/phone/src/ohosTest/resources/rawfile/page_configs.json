@@ -1,0 +1,175 @@
+[
+  {
+    "key": "sub_user",
+    "type": 0,
+    "index": 0
+  },
+  {
+    "key": "language_select",
+    "type": 0,
+    "index": 10
+  },
+  {
+    "key": "region_select",
+    "type": 0,
+    "index": 20
+  },
+  {
+    "key": "quick_setup",
+    "type": 0,
+    "index": 30
+  },
+  {
+    "key": "ring",
+    "index": 31,
+    "type": 1,
+    "bundleName": "com.ohos.openharmony.superdevice",
+    "abilityName": "HarmonyAbility",
+    "params": {
+      "ability.want.params.uiExtensionType": "sys/commonUI",
+      "auth_package_name": "hmos.collaborationfwk.deviceDetect",
+      "showBack": 1,
+      "deviceId": "",
+      "pinCode": "",
+      "authType": ""
+    }
+  },
+  {
+    "key": "verify_pass_word",
+    "index": 32,
+    "type": 1,
+    "bundleName": "com.ohos.openharmony.dataclone",
+    "abilityName": "VerficationPassWordAbility",
+    "params": {
+      "from": "jump from oobe",
+      "ability.want.params.uiExtensionType": "sys/commonUI"
+    }
+  },
+  {
+    "key": "setting_up",
+    "type": 0,
+    "index": 33
+  },
+  {
+    "key": "basic_service_statement",
+    "type": 0,
+    "index": 40
+  },
+  {
+    "key":"edm",
+    "type": 1,
+    "index": 60,
+    "bundleName": "com.openharmony.hmsapp.adminprovisioning",
+    "abilityName": "MDMUIExtensionAbility",
+    "params": {
+      "ability.want.params.uiExtensionType": "sys/commonUI"
+    }
+  },
+  {
+    "key": "wlan",
+    "index": 70,
+    "type": 1,
+    "bundleName": "com.ohos.settings",
+    "abilityName": "com.ohos.settings.OobeWifiSettingsExtensionAbility",
+    "params": {
+      "ability.want.params.uiExtensionType": "sys/commonUI"
+    }
+  },
+  {
+    "key": "activation_lock",
+    "type": 1,
+    "index": 80,
+    "bundleName": "com.ohos.openharmony.findservice",
+    "abilityName": "FindServiceOOBEActivationLock",
+    "params": {
+      "oobe_device_activation": true,
+      "ability.want.params.uiExtensionType": "sys/commonUI"
+    }
+  },
+  {
+    "key":"edm_provisioning",
+    "type": 1,
+    "index": 86,
+    "bundleName": "com.openharmony.hmsapp.adminprovisioning",
+    "abilityName": "OnlineProvisionAbility",
+    "params": {
+      "ability.want.params.uiExtensionType": "sys/commonUI"
+    }
+  },
+  {
+    "key": "device_protection_statement",
+    "type": 0,
+    "index": 90
+  },
+  {
+    "key": "account_login",
+    "action": "add",
+    "index": 100,
+    "type": 1,
+    "bundleName": "com.openharmony.ohos.id",
+    "abilityName": "AccountUIExtensionAbility",
+    "params": {
+      "requestType": 9,
+      "ability.want.params.uiExtensionType": "hms/account"
+    }
+  },
+  {
+    "key": "enhanced_service_statement",
+    "type": 0,
+    "index": 110
+  },
+  {
+    "key": "data_import_ability",
+    "type": 1,
+    "index": 120,
+    "bundleName": "com.ohos.openharmony.dataclone",
+    "abilityName": "DataImportExtensionAbility",
+    "params": {
+      "from": "jump from oobe",
+      "ability.want.params.uiExtensionType": "sys/commonUI",
+      "isFastCloneScene": false,
+      "oldDeviceName": "",
+      "windowRectWidth": ""
+    }
+  },
+  {
+    "key": "service_changed_statement",
+    "type": 0,
+    "index": 1000
+  },
+  {
+    "key": "tips_inner_film",
+    "type": 0,
+    "index": 500
+  },
+  {
+    "key": "upgrade_guide",
+    "type": 0,
+    "index": 1010
+  },
+  {
+    "key": "experience",
+    "type": 0,
+    "index": 1040
+  },
+  {
+    "key": "ota_tearProof_Tips",
+    "type": 0,
+    "index": 1030
+  },
+  {
+    "key": "ota_pressed_Tips",
+    "type": 0,
+    "index": 1031
+  },
+  {
+    "key": "parent_protection",
+    "type": 1,
+    "index": 95,
+    "bundleName": "com.ohos.openharmony.parentcontrol",
+    "abilityName": "ParentProtectionVerifyAbility",
+    "params": {
+      "ability.want.params.uiExtensionType": "ui"
+    }
+  }
+]

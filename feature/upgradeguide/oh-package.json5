@@ -1,0 +1,10 @@
+{
+  "name": "@ohos/hwstartupguide.upgradeguide",
+  "description": "hwstartupguide upgradeguide",
+  "main": "index.ets",
+  "version": "1.0.0",
+  "dependencies": {
+    "@ohos/hwstartupguide.common": "file:../../common"
+  }
+}
+

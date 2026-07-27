@@ -1,0 +1,39 @@
+{
+    "string":[
+        {
+            "name":"outerpage_tips",
+            "value":"Klappen Sie Ihr Telefon auf, um fortzufahren",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"cancel",
+            "value":"Abbrechen",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"exit",
+            "value":"Beenden",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"exit_dialog_tips",
+            "value":"Möchten Sie den Vorgang wirklich beenden?",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"hwstartguide_title",
+            "value":"OOBE",
+            "attr":{
+                "priority":"LT"
+            }
+        }
+    ]
+}

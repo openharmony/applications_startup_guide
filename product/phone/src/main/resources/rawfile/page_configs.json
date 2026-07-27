@@ -1,0 +1,85 @@
+[
+  {
+    "key": "welcome",
+    "type": 0,
+    "index": 1
+  },
+  {
+    "key": "language_select",
+    "type": 0,
+    "index": 10
+  },
+  {
+    "key": "region_select",
+    "type": 0,
+    "index": 20
+  },
+  {
+    "key": "basic_service_statement",
+    "type": 0,
+    "index": 40
+  },
+  {
+    "key": "loading",
+    "type": 0,
+    "index": 39
+  },
+  {
+    "key": "enhanced_service_statement",
+    "type": 0,
+    "index": 110
+  },
+  {
+    "key": "data_privacy",
+    "action": "add",
+    "index": 65,
+    "type": 1,
+    "bundleName": "com.ohos.openharmony.security.privacycenter",
+    "abilityName": "DataPrivacyOobeAbility",
+    "params": {
+      "ability.want.params.uiExtensionType": "sys/commonUI"
+    }
+  },
+  {
+    "key": "wlan",
+    "index": 70,
+    "type": 1,
+    "bundleName": "com.ohos.settings",
+    "abilityName": "com.ohos.settings.OobeWifiSettingsExtensionAbility",
+    "params": {
+      "ability.want.params.uiExtensionType": "sys/commonUI"
+    }
+  },
+  {
+    "key": "sim",
+    "index": 75,
+    "type": 1,
+    "bundleName": "com.ohos.openharmony.simcardmanagement",
+    "abilityName": "AddEsimAbility",
+    "params": {
+      "ability.want.params.uiExtensionType": "sys/commonUI"
+    }
+  },
+  {
+    "key": "device_protection_statement",
+    "action": "add",
+    "type": 1,
+    "index": 90,
+    "bundleName": "com.ohos.openharmony.useriam.idmwidget",
+    "abilityName": "EnrollUIAbility",
+    "params": {
+      "enrollStyle": 10001,
+      "ability.want.params.uiExtensionType": "sys/commonUI"
+    }
+  },
+  {
+    "key": "service_changed_statement",
+    "type": 0,
+    "index": 1000
+  },
+  {
+    "key": "experience",
+    "type": 0,
+    "index": 1040
+  }
+]

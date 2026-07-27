@@ -1,0 +1,25 @@
+{
+    "string":[
+        {
+            "name":"ota_enhance_service_update",
+            "value":"Rozszerzone usługi – aktualizacja oświadczenia",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"ota_basic_service_update",
+            "value":"Oświadczenie dotyczące usług podstawowych - aktualizacja",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"ota_service_and_improve",
+            "value":"Usługi i środowisko",
+            "attr":{
+                "priority":"LT"
+            }
+        }
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "string":[
+        {
+            "name":"ota_enhance_service_update",
+            "value":"ཞབས་ཞུ་ཤུགས་ཆེར་གཏོང་བའི་གསལ་བསྒྲགས་གསར་སྒྱུར།",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"ota_basic_service_update",
+            "value":"རྨང་གཞིའི་ཞབས་ཞུའི་གསལ་བསྒྲགས་གསར་སྒྱུར།",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"ota_service_and_improve",
+            "value":"ཞབས་ཞུ་དང་ཉམས་ལེན་ལེགས་སུ་གཏོང་བ།",
+            "attr":{
+                "priority":"LT"
+            }
+        }
+    ]
+}

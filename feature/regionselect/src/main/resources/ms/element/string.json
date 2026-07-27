@@ -1,0 +1,18 @@
+{
+    "string":[
+        {
+            "name":"region_select",
+            "value":"Pilih kawasan",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"continue",
+            "value":"Teruskan",
+            "attr":{
+                "priority":"LT"
+            }
+        }
+    ]
+}

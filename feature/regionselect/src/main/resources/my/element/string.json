@@ -1,0 +1,18 @@
+{
+    "string":[
+        {
+            "name":"region_select",
+            "value":"ဒေသ ရွေးချယ်ရန်",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"continue",
+            "value":"ဆက်လုပ်ရန်",
+            "attr":{
+                "priority":"LT"
+            }
+        }
+    ]
+}

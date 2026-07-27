@@ -1,0 +1,39 @@
+{
+    "string":[
+        {
+            "name":"cancel",
+            "value":"بىكار قىلىش",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"exit",
+            "value":"چېكىنىش",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"exit_dialog_tips",
+            "value":"سەپلەشتىن چېكىنەمسىز؟",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"outerpage_tips",
+            "value":"قاتلاقنى ئېچىپ داۋاملاشتۇرۇڭ.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"hwstartguide_title",
+            "value":"سەپلىگۈچ",
+            "attr":{
+                "priority":"LT"
+            }
+        }
+    ]
+}

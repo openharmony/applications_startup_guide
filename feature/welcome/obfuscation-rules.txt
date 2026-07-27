@@ -1,0 +1,19 @@
+-enable-property-obfuscation
+-enable-filename-obfuscation
+-enable-toplevel-obfuscation
+-enable-export-obfuscation
+-compact
+-remove-log
+
+# @ohos/lottie 内部 JS（DataManager 等）不可混淆，否则 release 包 Lottie 无法播放
+-keep
+../../oh_modules/@ohos/lottie
+
+# Lottie @ohos/lottie loadAnimation config keys
+-keep-property-name
+animationData
+container
+renderer
+loop
+autoplay
+name

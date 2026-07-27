@@ -1,0 +1,6 @@
+{
+  "src": [
+    "pages/Page",
+    "pages/RebootNoticePage"
+  ]
+}

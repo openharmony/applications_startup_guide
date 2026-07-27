@@ -1,0 +1,25 @@
+{
+    "string":[
+        {
+            "name":"ota_enhance_service_update",
+            "value":"อัปเดตคำชี้แจงบริการเสริม",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"ota_basic_service_update",
+            "value":"อัปเดตคำชี้แจงบริการพื้นฐาน",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"ota_service_and_improve",
+            "value":"บริการและการใช้งาน",
+            "attr":{
+                "priority":"LT"
+            }
+        }
+    ]
+}

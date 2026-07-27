@@ -1,0 +1,15 @@
+{
+  "modelVersion": "5.0.0",
+  "devDependencies": {
+    "@ohos/hypium": "1.0.21",
+    "@ohos/lottie": "2.0.27"
+    // "@hw-appgallery/app-classify": "^1.0.2"
+  },
+  "name": "hwstartupguide",
+  "description": "",
+  "version": "1.0.0",
+  "dependencies": {
+    // "@hms-security/consent": "6.12.5-310",
+    // "@hms-security/consent_grs_system": "6.12.5-310"
+  }
+}

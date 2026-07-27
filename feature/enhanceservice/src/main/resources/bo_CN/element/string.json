@@ -1,0 +1,18 @@
+{
+    "string":[
+        {
+            "name":"enhance_services_page_title",
+            "value":"ཞབས་ཞུ་ཤུགས་སྣོན་པ་དང་སྤྱོད་མཁན་གྱི་ཉམས་ལེན་ལེགས་བཅོས།",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"open_all_enhance_service",
+            "value":"ཚང་མ་སྤྱོད་འགོ་འཛུགས།",
+            "attr":{
+                "priority":"LT"
+            }
+        }
+    ]
+}

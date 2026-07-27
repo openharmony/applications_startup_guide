@@ -1,0 +1,10 @@
+{
+  "devDependencies": {},
+  "name": "@ohos/hwstartupguide.regionselect",
+  "description": "hwstartupguide regionselect",
+  "main": "index.ets",
+  "version": "1.0.0",
+  "dependencies": {
+   "@ohos/hwstartupguide.common": "file:../../common",
+  }
+}

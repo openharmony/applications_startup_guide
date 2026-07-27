@@ -1,0 +1,25 @@
+{
+    "string":[
+        {
+            "name":"ota_enhance_service_update",
+            "value":"كۈچەيتمە مۇلازىمەت باياناتى يېڭىلانمىسى",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"ota_basic_service_update",
+            "value":"ئاساسى مۇلازىمەت باياناتى يېڭىلانمىسى",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"ota_service_and_improve",
+            "value":"مۇلازىمەت ۋە تەسىرات ياخشىلاش",
+            "attr":{
+                "priority":"LT"
+            }
+        }
+    ]
+}

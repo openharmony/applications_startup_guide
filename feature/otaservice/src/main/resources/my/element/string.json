@@ -1,0 +1,25 @@
+{
+    "string":[
+        {
+            "name":"ota_enhance_service_update",
+            "value":"မြှင့်တင်ထားသော ဝန်ဆောင်မှုများ ကြေညာချက် အပ်ဒိတ်",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"ota_basic_service_update",
+            "value":"အခြေခံ ဝန်ဆောင်မှု ကြေညာချက် အပ်ဒိတ်",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"ota_service_and_improve",
+            "value":"ဝန်ဆောင်မှုများနှင့် အတွေ့အကြုံ",
+            "attr":{
+                "priority":"LT"
+            }
+        }
+    ]
+}

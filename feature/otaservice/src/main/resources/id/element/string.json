@@ -1,0 +1,25 @@
+{
+    "string":[
+        {
+            "name":"ota_enhance_service_update",
+            "value":"Pembaruan Pernyataan Layanan yang Ditingkatkan",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"ota_basic_service_update",
+            "value":"Pembaruan Pernyataan Layanan Dasar",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"ota_service_and_improve",
+            "value":"Layanan dan pengalaman",
+            "attr":{
+                "priority":"LT"
+            }
+        }
+    ]
+}

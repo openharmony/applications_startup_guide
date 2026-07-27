@@ -1,0 +1,18 @@
+{
+    "string":[
+        {
+            "name":"enhance_services_page_title",
+            "value":"增強式服務與使用者體驗改進",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"open_all_enhance_service",
+            "value":"啟用全部",
+            "attr":{
+                "priority":"LT"
+            }
+        }
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "string":[
+        {
+            "name":"ota_enhance_service_update",
+            "value":"Обновление уведомления о дополнительных службах",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"ota_basic_service_update",
+            "value":"Обновление уведомления об основных службах",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"ota_service_and_improve",
+            "value":"Обслуживание и пользовательский опыт",
+            "attr":{
+                "priority":"LT"
+            }
+        }
+    ]
+}

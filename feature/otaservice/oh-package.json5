@@ -1,0 +1,12 @@
+{
+  "devDependencies": {},
+  "name": "@ohos/hwstartupguide.otaservice",
+  "description": "hwstartupguide otaservice",
+  "main": "index.ets",
+  "version": "1.0.0",
+  "dependencies": {
+   "@ohos/hwstartupguide.common": "file:../../common",
+    "@ohos/hwstartupguide.enhanceservice": "file:../../feature/enhanceservice",
+    "@ohos/hwstartupguide.basicservice": "file:../../feature/basicservice"
+  }
+}

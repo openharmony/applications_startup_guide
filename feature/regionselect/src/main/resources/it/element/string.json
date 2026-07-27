@@ -1,0 +1,18 @@
+{
+    "string":[
+        {
+            "name":"region_select",
+            "value":"Seleziona area",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"continue",
+            "value":"Continua",
+            "attr":{
+                "priority":"LT"
+            }
+        }
+    ]
+}

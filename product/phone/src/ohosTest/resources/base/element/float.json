@@ -1,0 +1,368 @@
+{
+  "float": [
+    {
+      "name": "wh_20",
+      "value": "20vp"
+    },
+    {
+      "name": "wh_24",
+      "value": "24vp"
+    },
+    {
+      "name": "wh_value_1",
+      "value": "1vp"
+    },
+    {
+      "name": "wh_value_4",
+      "value": "4vp"
+    },
+    {
+      "name": "wh_value_5",
+      "value": "5vp"
+    },
+    {
+      "name": "wh_value_8",
+      "value": "8vp"
+    },
+    {
+      "name": "wh_value_10",
+      "value": "10vp"
+    },
+    {
+      "name": "wh_value_12",
+      "value": "12vp"
+    },
+    {
+      "name": "wh_value_13",
+      "value": "13vp"
+    },
+    {
+      "name": "wh_value_15",
+      "value": "15vp"
+    },
+    {
+      "name": "wh_value_16",
+      "value": "16vp"
+    },
+    {
+      "name": "wh_value_19",
+      "value": "19vp"
+    },
+    {
+      "name": "wh_value_20",
+      "value": "20vp"
+    },
+    {
+      "name": "wh_value_22",
+      "value": "22vp"
+    },
+    {
+      "name": "wh_value_24",
+      "value": "24vp"
+    },
+    {
+      "name": "wh_value_26",
+      "value": "26vp"
+    },
+    {
+      "name": "wh_value_28",
+      "value": "28vp"
+    },
+    {
+      "name": "wh_value_30",
+      "value": "30"
+    },
+    {
+      "name": "wh_value_32",
+      "value": "32"
+    },
+    {
+      "name": "wh_value_33",
+      "value": "33vp"
+    },
+    {
+      "name": "wh_value_40",
+      "value": "40vp"
+    },
+    {
+      "name": "wh_value_44",
+      "value": "44vp"
+    },
+    {
+      "name": "wh_value_48",
+      "value": "48vp"
+    },
+    {
+      "name": "wh_value_50",
+      "value": "50vp"
+    },
+    {
+      "name": "wh_value_56",
+      "value": "56vp"
+    },
+    {
+      "name": "wh_value_60",
+      "value": "60vp"
+    },
+    {
+      "name": "wh_value_65",
+      "value": "65vp"
+    },
+    {
+      "name": "wh_value_70",
+      "value": "70vp"
+    },
+    {
+      "name": "wh_value_80",
+      "value": "80vp"
+    },
+    {
+      "name": "wh_value_100",
+      "value": "100vp"
+    },
+    {
+      "name": "wh_value_130",
+      "value": "1300vp"
+    },
+    {
+      "name": "wh_value_160",
+      "value": "160vp"
+    },
+    {
+      "name": "wh_value_210",
+      "value": "210vp"
+    },
+    {
+      "name": "wh_value_230",
+      "value": "230vp"
+    },
+    {
+      "name": "wh_value_280",
+      "value": "280vp"
+    },
+    {
+      "name": "wh_value_390",
+      "value": "390vp"
+    },
+    {
+      "name": "wh_value_400",
+      "value": "400vp"
+    },
+    {
+      "name": "font_35",
+      "value": "35fp"
+    },
+    {
+      "name": "font_10",
+      "value": "10fp"
+    },
+    {
+      "name": "font_14",
+      "value": "14fp"
+    },
+    {
+      "name": "font_16",
+      "value": "16fp"
+    },
+    {
+      "name": "font_18",
+      "value": "18fp"
+    },
+    {
+      "name": "font_20",
+      "value": "20fp"
+    },
+    {
+      "name": "font_21",
+      "value": "21fp"
+    },
+    {
+      "name": "font_22",
+      "value": "22fp"
+    },
+    {
+      "name": "font_24",
+      "value": "24fp"
+    },
+    {
+      "name": "font_28",
+      "value": "28fp"
+    },
+    {
+      "name": "font_50",
+      "value": "50fp"
+    },
+    {
+      "name": "distance_0",
+      "value": "0vp"
+    },
+    {
+      "name": "distance_1",
+      "value": "1vp"
+    },
+    {
+      "name": "distance_2",
+      "value": "2vp"
+    },
+    {
+      "name": "distance_3",
+      "value": "3vp"
+    },
+    {
+      "name": "distance_4",
+      "value": "4vp"
+    },
+    {
+      "name": "distance_8",
+      "value": "8vp"
+    },
+    {
+      "name": "distance_9",
+      "value": "9vp"
+    },
+    {
+      "name": "distance_12",
+      "value": "12vp"
+    },
+    {
+      "name": "distance_16",
+      "value": "16vp"
+    },
+    {
+      "name": "distance_17_5",
+      "value": "17.5vp"
+    },
+    {
+      "name": "distance_20",
+      "value": "20vp"
+    },
+    {
+      "name": "distance_24",
+      "value": "24vp"
+    },
+    {
+      "name": "distance_28",
+      "value": "28vp"
+    },
+    {
+      "name": "distance_32",
+      "value": "32vp"
+    },
+    {
+      "name": "distance_36",
+      "value": "36vp"
+    },
+    {
+      "name": "distance_40",
+      "value": "40vp"
+    },
+    {
+      "name": "distance_48",
+      "value": "48vp"
+    },
+    {
+      "name": "distance_56",
+      "value": "56vp"
+    },
+    {
+      "name": "distance_68",
+      "value": "68vp"
+    },
+    {
+      "name": "distance_76",
+      "value": "76vp"
+    },
+    {
+      "name": "distance_100",
+      "value": "100vp"
+    },
+    {
+      "name": "distance_128",
+      "value": "128vp"
+    },
+    {
+      "name": "distance_186",
+      "value": "186vp"
+    },
+    {
+      "name": "distance_216",
+      "value": "216vp"
+    },
+    {
+      "name": "radius_20",
+      "value": "20vp"
+    },
+    {
+      "name": "radius_24",
+      "value": "24vp"
+    },
+    {
+      "name": "lineHeight_19",
+      "value": "19vp"
+    },
+    {
+      "name": "head_font_24",
+      "value": "24vp"
+    },
+    {
+      "name": "opacity_0_2",
+      "value": "0.2"
+    },
+    {
+      "name": "margin_12",
+      "value": "12vp"
+    },
+    {
+      "name": "margin_16",
+      "value": "16vp"
+    },
+    {
+      "name": "margin_24",
+      "value": "24vp"
+    },
+    {
+      "name": "padding_12",
+      "value": "12vp"
+    },
+    {
+      "name": "padding_17",
+      "value": "17vp"
+    },
+    {
+      "name": "privacy_statement_page_padding_left",
+      "value": "12vp"
+    },
+    {
+      "name": "privacy_statement_page_padding_right",
+      "value": "12vp"
+    },
+    {
+      "name": "privacy_statement_page_padding_top",
+      "value": "40vp"
+    },
+    {
+      "name": "privacy_statement_page_padding_bottom",
+      "value": "16vp"
+    },
+    {
+      "name": "height_21",
+      "value": "21vp"
+    },
+    {
+      "name": "height_40",
+      "value": "40vp"
+    },
+    {
+      "name": "height_48",
+      "value": "48vp"
+    },
+    {
+      "name": "height_56",
+      "value": "56vp"
+    },
+    {
+      "name": "height_64",
+      "value": "64vp"
+    }
+  ]
+}

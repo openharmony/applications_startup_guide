@@ -1,0 +1,25 @@
+{
+    "string":[
+        {
+            "name":"ota_enhance_service_update",
+            "value":"تحديث بيان الخدمات المُحسَّنة",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"ota_basic_service_update",
+            "value":"تحديث بيان الخدمات الأساسية",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"ota_service_and_improve",
+            "value":"تحسين الخدمات وتجربة الاستخدام",
+            "attr":{
+                "priority":"LT"
+            }
+        }
+    ]
+}

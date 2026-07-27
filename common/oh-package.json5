@@ -1,0 +1,7 @@
+{
+  "name": "@ohos/hwstartupguide.common",
+  "description": "HwStartupGuide common",
+  "main": "index.ets",
+  "version": "1.0.0",
+  "dependencies": {}
+}

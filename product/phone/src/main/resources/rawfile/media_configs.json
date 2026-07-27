@@ -1,0 +1,18 @@
+{
+  "background": {
+    "landscapeScreen": "ball_bg_land.png",
+    "portraitScreen": "ball_bg_port.png"
+  },
+  "enterHome": {
+    "landscapeScreen": "enter_home_land.mp4",
+    "portraitScreen": "enter_home_port.mp4"
+  },
+  "firstWelcomeOne": {
+    "portraitScreen": "welcome_port_one.mp4",
+    "landscapeScreen": "welcome_land_one.mp4"
+  },
+  "firstWelcomeTwo": {
+    "portraitScreen": "welcome_port_two.mp4",
+    "landscapeScreen": "welcome_land_two.mp4"
+  }
+}

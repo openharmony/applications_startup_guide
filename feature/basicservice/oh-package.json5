@@ -1,0 +1,9 @@
+{
+  "name": "@ohos/hwstartupguide.basicservice",
+  "description": "hwstartupguide basicservice",
+  "main": "index.ets",
+  "version": "1.0.0",
+  "dependencies": {
+    "@ohos/hwstartupguide.common": "file:../../common"
+  }
+}

@@ -1,0 +1,27 @@
+[
+  {
+    "title": "device_permitted_agreement",
+    "type": "0",
+    "content": [""]
+  },
+  {
+    "title": "privacy_statement",
+    "type": "0",
+    "content": [""]
+  },
+  {
+    "title": "sensitive_behavior_statement_of_system_services",
+    "type": "1",
+    "content": [
+      "sensitive_behavior_statement_of_system_services_detail_softwareupdate",
+      "sensitive_behavior_statement_of_system_services_detail_device_communication",
+      "sensitive_behavior_statement_of_system_services_detail_system_storage",
+      "sensitive_behavior_statement_of_system_services_detail_carrier",
+      "sensitive_behavior_statement_of_system_services_detail_auto_discovery",
+      "sensitive_behavior_statement_of_system_services_detail_common_security",
+      "sensitive_behavior_statement_of_system_services_detail_picker",
+      "sensitive_behavior_statement_of_system_services_detail_authentication",
+      "sensitive_behavior_statement_of_system_services_detail_colorpickerservice"
+    ]
+  }
+]

@@ -1,0 +1,18 @@
+{
+    "string":[
+        {
+            "name":"region_select",
+            "value":"選取地區",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"continue",
+            "value":"繼續",
+            "attr":{
+                "priority":"LT"
+            }
+        }
+    ]
+}

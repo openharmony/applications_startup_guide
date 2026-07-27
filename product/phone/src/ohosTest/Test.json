@@ -1,0 +1,51 @@
+{
+  "description": "Configuration for demo Tests",
+  "driver": {
+    "type": "OHJSUnitTest",
+    "test-timeout": "180000",
+    "bundle-name": "com.ohos.startupguide",
+    "module-name": "entry_test",
+    "shell-timeout": "600000",
+    "testcase-timeout": "30000",
+    "compile-mode": "esmodule",
+    "coverage": true,
+    "package-tool-path": "D:\\Local\\coverage2.0\\node_modules\\@ohos\\coverage"
+  },
+  "kits": [
+    {
+      "run-command": [
+        "mount -o rw,remount /",
+        "sync",
+        "/system/bin/udevadm trigger",
+        "param set persist.usb.setting.gadget_conn_prompt false",
+        "reboot",
+        "wait 5",
+        "power-shell wakeup",
+        "uinput -T -m 540 1752 540 751 500",
+        "uinput -T -g 100 100 500 500",
+        "power-shell setmode 602",
+        "uinput -T -c 630 1700"
+      ],
+      "teardown-command": [
+        "power-shell setmode 600"
+      ],
+      "type": "ShellKit"
+    },
+    {
+      "test-file-name": [
+        "oobe.hap",
+        "oobeTest.hap"
+      ],
+      "type": "AppInstallKit"
+    },
+    {
+      "run-command": [
+        "bm enable -n com.ohos.startupguide",
+        "bm enable -n com.ohos.startupguide -a com.ohos.startupguide.MainAbility"
+      ],
+      "teardown-command": [
+      ],
+      "type": "ShellKit"
+    }
+  ]
+}

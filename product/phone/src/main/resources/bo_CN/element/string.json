@@ -1,0 +1,39 @@
+{
+    "string":[
+        {
+            "name":"cancel",
+            "value":"འདོར་བ།",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"exit",
+            "value":"ཕྱིར་འཐེན།",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"exit_dialog_tips",
+            "value":"འདི་ལྟར་བཀོལ་སྤྱོད་བྱས་ན་མིག་སྔའི་སྒྲིག་འགོད་ལས་ཕྱིར་འཐེན་བྱ། ཕྱིར་འཐེན་བྱ་རྒྱུ་གཏན་འཁེལ་ཡིན་ནམ།",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"outerpage_tips",
+            "value":"ཁ་པར་ཁ་བཀྲམ་ནས་མུ་མཐུད་བཀོལ་རོགས།",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"hwstartguide_title",
+            "value":"འགོ་སློང་ལམ་ཁྲིད།",
+            "attr":{
+                "priority":"LT"
+            }
+        }
+    ]
+}

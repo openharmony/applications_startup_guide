@@ -1,0 +1,25 @@
+{
+    "string":[
+        {
+            "name":"ota_enhance_service_update",
+            "value":"Erklärung zu Verbesserten Services – Aktualisierung",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"ota_basic_service_update",
+            "value":"Erklärung zu Grundlegenden Services – Aktualisierung",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"ota_service_and_improve",
+            "value":"Services und Erfahrungen",
+            "attr":{
+                "priority":"LT"
+            }
+        }
+    ]
+}

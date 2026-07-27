@@ -1,0 +1,18 @@
+{
+    "string":[
+        {
+            "name":"region_select",
+            "value":"Выбор региона",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"continue",
+            "value":"Продолжить",
+            "attr":{
+                "priority":"LT"
+            }
+        }
+    ]
+}

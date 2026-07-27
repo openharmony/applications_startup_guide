@@ -1,0 +1,12 @@
+{
+    "string":[
+        {
+            "name":"open_all_enhance_service",
+            "value":"[TS_848170]_Enable all"
+        },
+        {
+            "name":"enhance_services_page_title",
+            "value":"[TS_840885]_Enhanced services"
+        }
+    ]
+}

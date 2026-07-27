@@ -1,0 +1,25 @@
+{
+    "string":[
+        {
+            "name":"ota_enhance_service_update",
+            "value":"強化されたサービスの声明に対する更新",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"ota_basic_service_update",
+            "value":"基本サービスの声明に対する更新",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"ota_service_and_improve",
+            "value":"サービスとユーザー体験",
+            "attr":{
+                "priority":"LT"
+            }
+        }
+    ]
+}

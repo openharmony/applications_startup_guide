@@ -1,0 +1,18 @@
+{
+    "string":[
+        {
+            "name":"region_select",
+            "value":"选择地区",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"continue",
+            "value":"继续",
+            "attr":{
+                "priority":"translate"
+            }
+        }
+    ]
+}

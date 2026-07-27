@@ -1,0 +1,18 @@
+{
+    "string":[
+        {
+            "name":"enhance_services_page_title",
+            "value":"향상된 서비스",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"open_all_enhance_service",
+            "value":"모두 실행",
+            "attr":{
+                "priority":"LT"
+            }
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+{
+  "statementVersion": "20260207",
+  "statementLists": [
+    {
+      "serviceType": "basic",
+      "serviceName": "basic_statement_software_update_cn",
+      "moduleName": "ouc_hm_base",
+      "packageName": "com.ohos.openharmony.ouc",
+      "validatorList": []
+    }
+  ]
+}
