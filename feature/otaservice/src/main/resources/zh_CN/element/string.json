@@ -1,0 +1,25 @@
+{
+    "string":[
+        {
+            "name":"ota_service_and_improve",
+            "value":"服务与体验改进",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"ota_basic_service_update",
+            "value":"基础服务声明更新",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"ota_enhance_service_update",
+            "value":"增强服务声明更新",
+            "attr":{
+                "priority":"translate"
+            }
+        }
+    ]
+}

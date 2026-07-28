@@ -1,0 +1,172 @@
+{
+    "string":[
+        {
+            "name":"back_string",
+            "value":"Назад",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"vision_settings",
+            "value":"Комфортное чтение",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"display_mode_font_size_normal",
+            "value":"Нормальный",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"display_mode_font_size_large",
+            "value":"Большой",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"display_mode_font_size_huge",
+            "value":"Огромный",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"emergency_call",
+            "value":"Экстренный вызов",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"display_mode_font_size_extra_large",
+            "value":"Очень крупный",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"choose_language",
+            "value":"Выбор языка",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"screen_zoom_text_size",
+            "value":"Шрифт",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"setting_font_size",
+            "value":"Настройка размера текста",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"reboot_device_button",
+            "value":"Перезагрузить устройство",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"enter_home",
+            "value":"Начать",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"reduce_font_size",
+            "value":"Уменьшить размер текста",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"loading_tips",
+            "value":"Загрузка данных системы...",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"empty_string",
+            "value":"--",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"enlarge_font_size",
+            "value":"Увеличить размер текста",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"reboot_device_title",
+            "value":"Ошибка системы",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"reboot_device_tips",
+            "value":"Ошибка системы. Перезагрузите ваше устройство.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"accessibility_selected_language_item",
+            "value":"Выбрано, %s",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"setting_font_size_content2",
+            "value":"Просто перетащите ползунок",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"confirm_button",
+            "value":"OK",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"setting_font_size_content1",
+            "value":"Как настроить размер текста?",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"welcome",
+            "value":"Здравствуйте",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"hwstartguide_title",
+            "value":"Мастер запуска",
+            "attr":{
+                "priority":"LT"
+            }
+        }
+    ]
+}

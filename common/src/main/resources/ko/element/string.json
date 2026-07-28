@@ -1,0 +1,172 @@
+{
+    "string":[
+        {
+            "name":"back_string",
+            "value":"뒤로",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"setting_font_size",
+            "value":"텍스트 크기 설정",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"reboot_device_button",
+            "value":"장치 다시 시작",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"enter_home",
+            "value":"시작하기",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"loading_tips",
+            "value":"시스템 데이터 로드 중…",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"empty_string",
+            "value":"--",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"vision_settings",
+            "value":"읽기 지원",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"display_mode_font_size_normal",
+            "value":"보통",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"display_mode_font_size_large",
+            "value":"크게",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"display_mode_font_size_huge",
+            "value":"아주 크게",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"reboot_device_title",
+            "value":"시스템 오류",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"reboot_device_tips",
+            "value":"시스템 오류가 발생했습니다. 장치를 다시 시작하십시오.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"setting_font_size_content2",
+            "value":"컨트롤 바를 드래그하면 됩니다",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"confirm_button",
+            "value":"확인",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"emergency_call",
+            "value":"비상 전화",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"display_mode_font_size_extra_large",
+            "value":"매우 크게",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"setting_font_size_content1",
+            "value":"텍스트 크기를 조정하는 방법",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"choose_language",
+            "value":"언어 선택",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"screen_zoom_text_size",
+            "value":"텍스트 크기",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"reduce_font_size",
+            "value":"텍스트 크기 축소",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"enlarge_font_size",
+            "value":"텍스트 크기 확대",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"accessibility_selected_language_item",
+            "value":"선택됨, %s",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"welcome",
+            "value":"환영합니다",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"hwstartguide_title",
+            "value":"OOBE",
+            "attr":{
+                "priority":"LT"
+            }
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "string":[
+        {
+            "name":"region_select",
+            "value":"ས་ཁུལ་འདེམས་པ།",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"continue",
+            "value":"མུ་མཐུད།",
+            "attr":{
+                "priority":"LT"
+            }
+        }
+    ]
+}

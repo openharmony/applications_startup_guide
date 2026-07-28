@@ -1,0 +1,172 @@
+{
+    "string":[
+        {
+            "name":"back_string",
+            "value":"Kembali",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"display_mode_font_size_normal",
+            "value":"Normal",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"display_mode_font_size_huge",
+            "value":"Paling besar",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"display_mode_font_size_extra_large",
+            "value":"Sangat besar",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"screen_zoom_text_size",
+            "value":"Saiz teks",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"vision_settings",
+            "value":"Bantuan membaca",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"display_mode_font_size_large",
+            "value":"Besar",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"welcome",
+            "value":"Selamat datang",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"emergency_call",
+            "value":"Panggilan kecemasan",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"choose_language",
+            "value":"Pilih bahasa",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"setting_font_size",
+            "value":"Tetapkan saiz teks",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"reduce_font_size",
+            "value":"Kurangkan saiz teks",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"loading_tips",
+            "value":"Memuat data sistem…",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"empty_string",
+            "value":"--",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"reboot_device_title",
+            "value":"Ralat sistem",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"setting_font_size_content2",
+            "value":"Hanya seret bar kawalan",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"confirm_button",
+            "value":"OK",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"setting_font_size_content1",
+            "value":"Bagaimanakah saya melaraskan saiz teks",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"reboot_device_button",
+            "value":"Mulakan semula peranti",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"enter_home",
+            "value":"Mari cuba",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"enlarge_font_size",
+            "value":"Besarkan saiz teks",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"reboot_device_tips",
+            "value":"Ralat sistem berlaku. Sila mulakan semula peranti anda.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"accessibility_selected_language_item",
+            "value":"Dipilih, %s",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"hwstartguide_title",
+            "value":"OOBE",
+            "attr":{
+                "priority":"LT"
+            }
+        }
+    ]
+}

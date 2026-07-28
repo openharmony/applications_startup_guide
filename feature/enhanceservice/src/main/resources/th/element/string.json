@@ -1,0 +1,18 @@
+{
+    "string":[
+        {
+            "name":"enhance_services_page_title",
+            "value":"บริการเสริม",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"open_all_enhance_service",
+            "value":"เปิดใช้งานทั้งหมด",
+            "attr":{
+                "priority":"LT"
+            }
+        }
+    ]
+}

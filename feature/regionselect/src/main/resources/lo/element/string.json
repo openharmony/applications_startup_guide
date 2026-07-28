@@ -1,0 +1,18 @@
+{
+    "string":[
+        {
+            "name":"region_select",
+            "value":"ເລືອກພາກ​ພື້ນ",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"continue",
+            "value":"ສືບຕໍ່",
+            "attr":{
+                "priority":"LT"
+            }
+        }
+    ]
+}

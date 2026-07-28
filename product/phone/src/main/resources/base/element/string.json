@@ -1,0 +1,123 @@
+{
+    "string":[
+        {
+            "name":"hwstartguide_title",
+            "value":"OOBE",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"exit_dialog_tips",
+            "value":"Are you sure you want to exit?",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"cancel",
+            "value":"Cancel",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"exit",
+            "value":"Exit",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"outerpage_tips",
+            "value":"Unfold your phone to continue",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"empty_string",
+            "value":"",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"agree_continue_format",
+            "value":"Agree & Continue",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"agree_continue_format_readingAid",
+            "value":"Agree and continue button",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"continue",
+            "value":"Continue",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"continue_format",
+            "value":"Continue",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"agreement_declaration",
+            "value":"Terms and Conditions",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"enhance_services_page_title",
+            "value":"Enhanced Services",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"ota_service_and_improve",
+            "value":"Service and Improvement",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"open_all_enhance_service",
+            "value":"Enable All Enhanced Services",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"ota_enhance_service_update",
+            "value":"Service Update",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"loading_tips",
+            "value":"Loading...",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"accessibility_selected_language_item",
+            "value":"Selected language, %s",
+            "attr":{
+                "priority":"LT"
+            }
+        }
+    ]
+}

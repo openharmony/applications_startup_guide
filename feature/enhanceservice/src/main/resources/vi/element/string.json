@@ -1,0 +1,18 @@
+{
+    "string":[
+        {
+            "name":"enhance_services_page_title",
+            "value":"Dịch vụ nâng cao",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"open_all_enhance_service",
+            "value":"Bật tất cả",
+            "attr":{
+                "priority":"LT"
+            }
+        }
+    ]
+}

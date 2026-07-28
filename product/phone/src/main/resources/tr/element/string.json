@@ -1,0 +1,39 @@
+{
+    "string":[
+        {
+            "name":"outerpage_tips",
+            "value":"Devam etmek için telefonunuzun kapağını açın",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"cancel",
+            "value":"İptal",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"exit",
+            "value":"Çık",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"exit_dialog_tips",
+            "value":"Çıkmak istediğinizden emin misiniz?",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"hwstartguide_title",
+            "value":"OOBE",
+            "attr":{
+                "priority":"LT"
+            }
+        }
+    ]
+}

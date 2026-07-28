@@ -1,0 +1,25 @@
+{
+    "string":[
+        {
+            "name":"ota_enhance_service_update",
+            "value":"Gelişmiş Servisler Beyanı Güncellemesi",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"ota_basic_service_update",
+            "value":"Temel Servis Beyanı Güncellemesi",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"ota_service_and_improve",
+            "value":"Servisler ve deneyim",
+            "attr":{
+                "priority":"LT"
+            }
+        }
+    ]
+}

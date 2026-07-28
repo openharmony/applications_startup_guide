@@ -1,0 +1,72 @@
+{
+  "color": [
+    {
+      "name": "page_background",
+      "value": "#F1F3F5"
+    },
+    {
+      "name": "start_window_background",
+      "value": "#FFFFFF"
+    },
+    {
+      "name": "scroll_bar_color",
+      "value": "#99808080"
+    },
+    {
+      "name": "page_bg_color",
+      "value": "#0D000000"
+    },
+    {
+      "name": "status_bar_color",
+      "value": "#00000000"
+    },
+    {
+      "name": "list_divider_color",
+      "value": "#33000000"
+    },
+    {
+      "name": "btn_color",
+      "value": "#0a59f7"
+    },
+    {
+      "name": "card_border_color",
+      "value": "#7FFFFFFF"
+    },
+    {
+      "name": "card_bg_color",
+      "value": "#4DFFFFFF"
+    },
+    {
+      "name": "card_shadow_color",
+      "value": "#19000000"
+    },
+    {
+      "name": "list_bg_color",
+      "value": "#99FFFFFF"
+    },
+    {
+      "name": "loading_progress_color",
+      "value": "#FF666666"
+    },
+    {
+      "name": "linear_mask_start_color",
+      "value": "#00E5E5F1"
+    },
+    {
+      "name": "scroller_bar_color",
+      "value": "#66000000"
+    },
+    {
+      "name": "linear_mask_end_color",
+      "value": "#FFE5E5F1"
+    },
+    {
+      "name": "ohos_id_alpha_content_secondary",
+      "value": "#99000000"
+    },
+    {
+      "name": "blue_default",
+      "value": "#0a59f7"
+    }
+  ]
+}

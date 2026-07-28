@@ -1,0 +1,18 @@
+{
+    "string":[
+        {
+            "name":"region_select",
+            "value":"Select region",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"continue",
+            "value":"Continue",
+            "attr":{
+                "priority":"translate"
+            }
+        }
+    ]
+}

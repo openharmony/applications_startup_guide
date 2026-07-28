@@ -1,0 +1,25 @@
+{
+    "string":[
+        {
+            "name":"ota_enhance_service_update",
+            "value":"ການອັບ​ເດດ​ຄຳຖະແຫຼງການບໍລິການ​ທີ່ປັບປຸງແລ້ວ",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"ota_basic_service_update",
+            "value":"ການອັບ​ເດດ​ຄຳ​ຖະແຫຼງການບໍລິການພື້ນ​ຖານ",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"ota_service_and_improve",
+            "value":"ການ​ບໍ​ລິ​ການ ແລະ ປະ​ສົບ​ການ",
+            "attr":{
+                "priority":"LT"
+            }
+        }
+    ]
+}

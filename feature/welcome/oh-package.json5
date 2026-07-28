@@ -1,0 +1,11 @@
+{
+  "devDependencies": {},
+  "name": "@ohos/hwstartupguide.welcome",
+  "description": "hwstartupguide welcome",
+  "main": "index.ets",
+  "version": "1.0.0",
+  "dependencies": {
+   "@ohos/hwstartupguide.common": "file:../../common",
+   "@ohos/hwstartupguide.languageselect": "file:../languageselect"
+  }
+}

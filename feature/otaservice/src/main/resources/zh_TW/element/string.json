@@ -1,0 +1,25 @@
+{
+    "string":[
+        {
+            "name":"ota_enhance_service_update",
+            "value":"增強式服務聲明更新",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"ota_basic_service_update",
+            "value":"基礎服務聲明更新",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"ota_service_and_improve",
+            "value":"服務與經驗改善",
+            "attr":{
+                "priority":"LT"
+            }
+        }
+    ]
+}

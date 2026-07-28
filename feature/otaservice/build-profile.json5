@@ -1,0 +1,28 @@
+{
+  "apiType": "stageMode",
+  "buildOption": {
+    "sourceOption": {
+      "workers": [
+        "./src/main/ets/workers/ServiceStatementWorker.ets"
+      ]
+    }
+  },
+  "buildOptionSet": [
+    {
+      "name": "release",
+      "arkOptions": {
+        "obfuscation": {
+          "ruleOptions": {
+            "enable": true,
+            "files": [
+              "./obfuscation-rules.txt"
+            ]
+          },
+          "consumerFiles": [
+            "./obfuscation-rules.txt"
+          ]
+        }
+      }
+    },
+  ]
+}

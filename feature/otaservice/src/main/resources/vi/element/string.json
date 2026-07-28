@@ -1,0 +1,25 @@
+{
+    "string":[
+        {
+            "name":"ota_enhance_service_update",
+            "value":"Cập nhật Thông báo Dịch vụ nâng cao",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"ota_basic_service_update",
+            "value":"Cập nhật Tuyên bố dịch vụ cơ bản",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"ota_service_and_improve",
+            "value":"Dịch vụ và trải nghiệm",
+            "attr":{
+                "priority":"LT"
+            }
+        }
+    ]
+}

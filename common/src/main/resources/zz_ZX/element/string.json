@@ -1,0 +1,104 @@
+{
+    "string":[
+        {
+            "name":"enter_home",
+            "value":"[TS_918450]_Let's go"
+        },
+        {
+            "name":"emergency_call",
+            "value":"[TS_918452]_Emergency call"
+        },
+        {
+            "name":"choose_language",
+            "value":"[TS_918448]_Select language"
+        },
+        {
+            "name":"vision_settings",
+            "value":"[TS_918451]_Reading aid"
+        },
+        {
+            "name":"back_string",
+            "value":"[TS_918446]_Back"
+        },
+        {
+            "name":"next_string",
+            "value":"[TS_918447]_next"
+        },
+        {
+            "name":"empty_string",
+            "value":"[TS_873955]_--"
+        },
+        {
+            "name":"hwstartguide_title",
+            "value":"[TS_840880]_OOBE"
+        },
+        {
+            "name":"setting_font_size",
+            "value":"[TS_945155]_Set text size"
+        },
+        {
+            "name":"display_mode_font_size_normal",
+            "value":"[TS_945156]_Normal"
+        },
+        {
+            "name":"display_mode_font_size_large",
+            "value":"[TS_945158]_Large"
+        },
+        {
+            "name":"display_mode_font_size_huge",
+            "value":"[TS_945150]_Huge"
+        },
+        {
+            "name":"setting_font_size_content2",
+            "value":"[TS_945152]_Simply drag the control bar"
+        },
+        {
+            "name":"confirm_button",
+            "value":"[TS_945153]_OK"
+        },
+        {
+            "name":"display_mode_font_size_extra_large",
+            "value":"[TS_945154]_Extra large"
+        },
+        {
+            "name":"setting_font_size_content1",
+            "value":"[TS_945149]_How do I adjust the text size"
+        },
+        {
+            "name":"screen_zoom_text_size",
+            "value":"[TS_945159]_Text size"
+        },
+        {
+            "name":"loading_tips",
+            "value":"[TS_974738]_Loading system data…"
+        },
+        {
+            "name":"reboot_device_button",
+            "value":"[TS_987936]_Restart device"
+        },
+        {
+            "name":"reboot_device_title",
+            "value":"[TS_987938]_System error"
+        },
+        {
+            "name":"reboot_device_tips",
+            "value":"[TS_987937]_A system error occurred. Please restart your device."
+        },
+        {
+            "name":"reduce_font_size",
+            "value":"[TS_993776]_Reduce text size"
+        },
+        {
+            "name":"enlarge_font_size",
+            "value":"[TS_993775]_Enlarge text size"
+        },
+        {
+            "name":"accessibility_selected_language_item",
+            "value":"[TS_1017938]_Selected language, %s"
+        },
+        {
+            "name":"welcome",
+            "value":"[TS_1098449]_Welcome"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+  "module": {
+    "name": "hwstartupguide.upgradeguide",
+    "type": "har",
+    "deviceTypes": [
+      "default",
+      "tablet"
+      // Legacy: "phone", "2in1"
+    ],
+    "metadata": [{
+      "name": "ArkTSPartialUpdate",
+      "value": "true"
+    },{
+      "name": "partialUpdateStrictCheck",
+      "value": "warn"
+    }]
+  }
+}

@@ -1,0 +1,172 @@
+{
+    "string":[
+        {
+            "name":"back_string",
+            "value":"رجوع",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"vision_settings",
+            "value":"مساعد القراءة",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"display_mode_font_size_normal",
+            "value":"طبيعي",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"display_mode_font_size_large",
+            "value":"كبير",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"display_mode_font_size_huge",
+            "value":"ضخم",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"emergency_call",
+            "value":"مكالمة طوارئ",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"display_mode_font_size_extra_large",
+            "value":"كبير جدًا",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"choose_language",
+            "value":"تحديد اللغة",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"screen_zoom_text_size",
+            "value":"حجم النص",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"setting_font_size",
+            "value":"اضبط حجم النص",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"reboot_device_button",
+            "value":"إعادة تشغيل الجهاز",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"enter_home",
+            "value":"هيا بنا",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"reduce_font_size",
+            "value":"تصغير حجم النص",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"loading_tips",
+            "value":"جارٍ تحميل بيانات النظام…",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"empty_string",
+            "value":"--",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"enlarge_font_size",
+            "value":"تكبير حجم النص",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"reboot_device_title",
+            "value":"مشكلة في النظام",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"reboot_device_tips",
+            "value":"مشكلة في النظام. يُرجى إعادة تشغيل الجهاز.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"accessibility_selected_language_item",
+            "value":"تم تحديد %s",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"setting_font_size_content2",
+            "value":"ما عليك سوى سحب شريط التحكم أدناه.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"confirm_button",
+            "value":"موافق",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"setting_font_size_content1",
+            "value":"كيف يمكنني ضبط حجم النص؟",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"welcome",
+            "value":"مرحبًا",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"hwstartguide_title",
+            "value":"تجربة الاستخدام الأولى",
+            "attr":{
+                "priority":"LT"
+            }
+        }
+    ]
+}

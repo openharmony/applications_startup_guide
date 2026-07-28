@@ -1,0 +1,18 @@
+{
+    "string":[
+        {
+            "name":"enhance_services_page_title",
+            "value":"增强服务与用户体验改进",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"open_all_enhance_service",
+            "value":"启用全部",
+            "attr":{
+                "priority":"translate"
+            }
+        }
+    ]
+}

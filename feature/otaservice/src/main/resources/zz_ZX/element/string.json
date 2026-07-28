@@ -1,0 +1,16 @@
+{
+    "string":[
+        {
+            "name":"ota_service_and_improve",
+            "value":"[TS_870363]_Services and experience"
+        },
+        {
+            "name":"ota_basic_service_update",
+            "value":"[TS_870361]_Basic Service Statement Update"
+        },
+        {
+            "name":"ota_enhance_service_update",
+            "value":"[TS_870362]_Enhanced Services Statement Update"
+        }
+    ]
+}

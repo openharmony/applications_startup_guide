@@ -1,0 +1,172 @@
+{
+    "string":[
+        {
+            "name":"back_string",
+            "value":"Back",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"display_mode_font_size_normal",
+            "value":"Normal",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"display_mode_font_size_huge",
+            "value":"Huge",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"display_mode_font_size_extra_large",
+            "value":"Extra large",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"screen_zoom_text_size",
+            "value":"Text size",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"vision_settings",
+            "value":"Reading aid",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"display_mode_font_size_large",
+            "value":"Large",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"welcome",
+            "value":"Welcome",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"emergency_call",
+            "value":"Emergency call",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"choose_language",
+            "value":"Select language",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"setting_font_size",
+            "value":"Set text size",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"reduce_font_size",
+            "value":"Reduce text size",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"loading_tips",
+            "value":"Loading system data…",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"empty_string",
+            "value":"--",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"reboot_device_title",
+            "value":"System error",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"setting_font_size_content2",
+            "value":"Simply drag the control bar",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"confirm_button",
+            "value":"OK",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"setting_font_size_content1",
+            "value":"How do I adjust the text size",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"reboot_device_button",
+            "value":"Restart device",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"enter_home",
+            "value":"Let's go",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"enlarge_font_size",
+            "value":"Enlarge text size",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"reboot_device_tips",
+            "value":"A system error occurred. Please restart your device.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"accessibility_selected_language_item",
+            "value":"Selected language, %s",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"hwstartguide_title",
+            "value":"OOBE",
+            "attr":{
+                "priority":"LT"
+            }
+        }
+    ]
+}

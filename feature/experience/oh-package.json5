@@ -1,0 +1,10 @@
+{
+  "devDependencies": {},
+  "name": "@ohos/hwstartupguide.experience",
+  "description": "hwstartupguide experience",
+  "main": "index.ets",
+  "version": "1.0.0",
+  "dependencies": {
+   "@ohos/hwstartupguide.common": "file:../../common",
+  }
+}

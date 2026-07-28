@@ -1,0 +1,176 @@
+{
+    "string":[
+        {
+            "name":"empty_string",
+            "value":"--",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"hwstartguide_title",
+            "value":"OOBE",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"back_string",
+            "value":"Back",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"next_string",
+            "value":"next"
+        },
+        {
+            "name":"enter_home",
+            "value":"Let's go",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"emergency_call",
+            "value":"Emergency call",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"choose_language",
+            "value":"Select language",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"vision_settings",
+            "value":"Reading aid",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"confirm_button",
+            "value":"OK",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"screen_zoom_text_size",
+            "value":"Text size",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"display_mode_font_size_normal",
+            "value":"Normal",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"display_mode_font_size_large",
+            "value":"Large",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"display_mode_font_size_extra_large",
+            "value":"Extra large",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"display_mode_font_size_huge",
+            "value":"Huge",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"setting_font_size",
+            "value":"Set text size",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"setting_font_size_content1",
+            "value":"How do I adjust the text size",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"setting_font_size_content2",
+            "value":"Simply drag the control bar",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"loading_tips",
+            "value":"Loading system data…",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"reboot_device_title",
+            "value":"System error",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"reboot_device_tips",
+            "value":"A system error occurred. Please restart your device.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"reboot_device_button",
+            "value":"Restart device",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"reduce_font_size",
+            "value":"Reduce text size",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"enlarge_font_size",
+            "value":"Enlarge text size",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"accessibility_selected_language_item",
+            "value":"Selected language, %s",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"welcome",
+            "value":"Welcome",
+            "attr":{
+                "priority":"translate"
+            }
+        }
+    ]
+}

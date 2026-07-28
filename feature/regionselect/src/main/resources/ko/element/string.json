@@ -1,0 +1,18 @@
+{
+    "string":[
+        {
+            "name":"region_select",
+            "value":"지역 선택",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"continue",
+            "value":"계속",
+            "attr":{
+                "priority":"LT"
+            }
+        }
+    ]
+}

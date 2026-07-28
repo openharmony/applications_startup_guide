@@ -1,0 +1,39 @@
+{
+    "string":[
+        {
+            "name":"outerpage_tips",
+            "value":"Mở điện thoại của bạn ra để tiếp tục",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"cancel",
+            "value":"Hủy",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"exit",
+            "value":"Thoát",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"exit_dialog_tips",
+            "value":"Bạn có chắc chắn muốn thoát không?",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"hwstartguide_title",
+            "value":"OOBE",
+            "attr":{
+                "priority":"LT"
+            }
+        }
+    ]
+}

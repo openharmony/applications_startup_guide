@@ -1,0 +1,18 @@
+{
+    "string":[
+        {
+            "name":"enhance_services_page_title",
+            "value":"كۈچەيمە مۇلازىمەت ۋە ئىشلەتكۈچى تەسىراتى",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"open_all_enhance_service",
+            "value":"بارلىق مۇلازىمەت",
+            "attr":{
+                "priority":"LT"
+            }
+        }
+    ]
+}

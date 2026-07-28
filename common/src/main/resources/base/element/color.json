@@ -1,0 +1,52 @@
+{
+  "color": [
+    {
+      "name": "blue_default",
+      "value": "#0A59F7"
+    },
+    {
+      "name": "btn_color",
+      "value": "#0A59F7"
+    },
+    {
+      "name": "font_size_message_bg_color",
+      "value": "#4D0A59F7"
+    },
+    {
+      "name": "card_border_color",
+      "value": "#7FFFFFFF"
+    },
+    {
+      "name": "card_bg_color",
+      "value": "#4DFFFFFF"
+    },
+    {
+      "name": "card_shadow_color",
+      "value": "#0C000000"
+    },
+    {
+      "name": "ohos_id_alpha_content_secondary",
+      "value": "#99000000"
+    },
+    {
+      "name": "start_window_background",
+      "value": "#FFFFFF"
+    },
+    {
+      "name": "list_bg_color",
+      "value": "#99FFFFFF"
+    },
+    {
+      "name": "button_pressed_color_light",
+      "value": "#E5FFFFFF"
+    },
+    {
+      "name": "button_pressed_color_dark",
+      "value": "#99FFFFFF"
+    },
+    {
+      "name": "list_bg_color_60",
+      "value": "#66FFFFFF"
+    }
+  ]
+}

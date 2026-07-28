@@ -1,0 +1,137 @@
+{
+    "string":[
+        {
+            "name":"continue_format",
+            "value":"Continue",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"agree_continue_format",
+            "value":"Agree & continue",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"basic_services",
+            "value":"Basic Service Statement",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"details",
+            "value":"Details",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"openharmony_privacy_statement",
+            "value":"OpenHarmony Privacy Statement",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"privacy_statement",
+            "value":"OpenHarmony Privacy Statement",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"agreement_declaration",
+            "value":"Terms of use",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"sensitive_behavior_statement_of_system_services_detail_softwareupdate",
+            "value":"Software update services need to connect to the Internet and read the list of installed apps.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"sensitive_behavior_statement_of_system_services_detail_device_communication",
+            "value":"Device communication services need to connect to the Internet and read this device's phone number(s), IMEI, SMS/MMS message content, and location information.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"sensitive_behavior_statement_of_system_services",
+            "value":"System Services Sensitive Behaviours Statement",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"sensitive_behavior_statement_of_system_services_detail_common_security",
+            "value":"Common security services need to connect to the Internet, read location information, as well as read and upload/transfer the list of installed apps, this device's phone number(s), and approximate location information.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"sensitive_behavior_statement_of_system_services_detail_authentication",
+            "value":"The authentication service needs to connect to the Internet to read the list of installed apps.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"sensitive_behavior_statement_of_system_services_detail_auto_discovery",
+            "value":"Auto-discovery services need to connect to the Internet, use Bluetooth and NFC, read and upload/transfer Bluetooth and WLAN MAC addresses, and enable the camera to scan codes.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"sensitive_behavior_statement_of_system_services_detail_picker",
+            "value":"Picker services need to read media data (images, videos, and audio), contacts, file data, and the list of installed apps, and enable the camera and microphone. ",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"device_permitted_agreement",
+            "value":"OpenHarmony Software Licence and Service Agreement",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"agree_continue_format_readingAid",
+            "value":"Agree and continue. Please read all terms first.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"sensitive_behavior_statement_of_system_services_detail_system_storage",
+            "value":"System storage services need to read Calendar event data and read and modify contacts and call logs data.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"sensitive_behavior_statement_of_system_services_detail_carrier",
+            "value":"Carrier services need to connect to the Internet, read and upload/transfer this device's phone number(s), IMEI, Bluetooth and WLAN MAC addresses, and approximate location information, and send and receive SMS messages.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"sensitive_behavior_statement_of_system_services_detail_colorpickerservice",
+            "value":"The global colour picker service needs to take screenshots in the background.",
+            "attr":{
+                "priority":"translate"
+            }
+        }
+    ]
+}

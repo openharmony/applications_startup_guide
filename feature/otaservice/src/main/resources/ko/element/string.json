@@ -1,0 +1,25 @@
+{
+    "string":[
+        {
+            "name":"ota_enhance_service_update",
+            "value":"향상된 서비스 방침 업데이트",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"ota_basic_service_update",
+            "value":"기본 서비스 방침 업데이트",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"ota_service_and_improve",
+            "value":"서비스와 경험",
+            "attr":{
+                "priority":"LT"
+            }
+        }
+    ]
+}

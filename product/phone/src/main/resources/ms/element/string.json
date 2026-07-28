@@ -1,0 +1,39 @@
+{
+    "string":[
+        {
+            "name":"outerpage_tips",
+            "value":"Nyahlipat telefon anda untuk meneruskan",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"cancel",
+            "value":"Batalkan",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"exit",
+            "value":"Keluar",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"exit_dialog_tips",
+            "value":"Pastikah anda mahu keluar?",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"hwstartguide_title",
+            "value":"OOBE",
+            "attr":{
+                "priority":"LT"
+            }
+        }
+    ]
+}

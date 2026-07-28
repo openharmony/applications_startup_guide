@@ -1,0 +1,15 @@
+/node_modules
+/local.properties
+/.idea
+**/build
+/.hvigor
+.cxx
+/.clangd
+/.clang-format
+/.clang-tidy
+/feature/*/oh_modules
+/oh_modules
+/product/*/oh_modules
+/hw_sign/hapsign-online-plugin.jar
+/hw_sign/hap-sign-tool.jar
+/product/phone/.test

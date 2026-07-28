@@ -1,0 +1,9 @@
+{
+  "name": "@ohos/hwstartupguide.enhanceservice",
+  "description": "hwstartupguide enhanceservice",
+  "main": "index.ets",
+  "version": "1.0.0",
+  "dependencies": {
+    "@ohos/hwstartupguide.common": "file:../../common"
+  }
+}

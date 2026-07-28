@@ -1,0 +1,172 @@
+{
+    "string":[
+        {
+            "name":"back_string",
+            "value":"Wstecz",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"display_mode_font_size_normal",
+            "value":"Zwykły",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"display_mode_font_size_huge",
+            "value":"Wielki",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"display_mode_font_size_extra_large",
+            "value":"Bardzo duży",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"screen_zoom_text_size",
+            "value":"Rozmiar tekstu",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"vision_settings",
+            "value":"Ułatwienie czytania",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"display_mode_font_size_large",
+            "value":"Duży",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"welcome",
+            "value":"Witaj",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"emergency_call",
+            "value":"Połączenie alarmowe",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"choose_language",
+            "value":"Wybierz język",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"setting_font_size",
+            "value":"Ustaw rozmiar tekstu",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"reduce_font_size",
+            "value":"Zmniejsz rozmiar tekstu",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"loading_tips",
+            "value":"Wczytywanie danych systemowych…",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"empty_string",
+            "value":"--",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"reboot_device_title",
+            "value":"Błąd systemu",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"setting_font_size_content2",
+            "value":"Przeciągnij pasek sterowania",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"confirm_button",
+            "value":"OK",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"setting_font_size_content1",
+            "value":"Jak można zmienić rozmiar tekstu?",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"reboot_device_button",
+            "value":"Uruchom urządzenie ponownie",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"enter_home",
+            "value":"Zaczynamy",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"enlarge_font_size",
+            "value":"Powiększ rozmiar tekstu",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"reboot_device_tips",
+            "value":"Wystąpił błąd systemu. Uruchom urządzenie ponownie.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"accessibility_selected_language_item",
+            "value":"Wybrano, %s",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"hwstartguide_title",
+            "value":"OOBE",
+            "attr":{
+                "priority":"LT"
+            }
+        }
+    ]
+}

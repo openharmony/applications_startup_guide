@@ -1,0 +1,80 @@
+{
+    "string":[
+        {
+            "name":"details",
+            "value":"[TS_840883]_Details"
+        },
+        {
+            "name":"agree_continue_format",
+            "value":"[TS_848172]_Agree & continue"
+        },
+        {
+            "name":"continue_format",
+            "value":"[TS_848171]_Continue"
+        },
+        {
+            "name":"device_permitted_agreement",
+            "value":"[TS_840888]_OpenHarmony Software License and Service Agreement"
+        },
+        {
+            "name":"agreement_declaration",
+            "value":"[TS_840887]_Terms of use"
+        },
+        {
+            "name":"basic_services",
+            "value":"[TS_840882]_Basic Service Statement"
+        },
+        {
+            "name":"sensitive_behavior_statement_of_system_services",
+            "value":"[TS_902922]_System Services Sensitive Behaviors Statement"
+        },
+        {
+            "name":"openharmony_privacy_statement",
+            "value":"[TS_895523]_OpenHarmony Privacy Statement"
+        },
+        {
+            "name":"privacy_statement",
+            "value":"[TS_895523]_OpenHarmony Privacy Statement"
+        },
+        {
+            "name":"agree_continue_format_readingAid",
+            "value":"[TS_945148]_Agree and continue. Please read all terms first."
+        },
+        {
+            "name":"sensitive_behavior_statement_of_system_services_detail_softwareupdate",
+            "value":"[TS_1053416]_Software update services need to connect to the Internet and read the list of installed apps."
+        },
+        {
+            "name":"sensitive_behavior_statement_of_system_services_detail_device_communication",
+            "value":"[TS_1053419]_Device communication services need to connect to the Internet and read this device's phone number(s), IMEI, SMS/MMS message content, and location information."
+        },
+        {
+            "name":"sensitive_behavior_statement_of_system_services_detail_common_security",
+            "value":"[TS_1053407]_Common security services need to connect to the Internet, read location information, as well as read and upload/transfer the list of installed apps, this device's phone number(s), and approximate location information."
+        },
+        {
+            "name":"sensitive_behavior_statement_of_system_services_detail_authentication",
+            "value":"[TS_1053411]_The authentication service needs to connect to the Internet to read the list of installed apps."
+        },
+        {
+            "name":"sensitive_behavior_statement_of_system_services_detail_auto_discovery",
+            "value":"[TS_1053414]_Auto-discovery services need to connect to the Internet, use Bluetooth and NFC, read and upload/transfer Bluetooth and WLAN MAC addresses, and enable the camera to scan codes."
+        },
+        {
+            "name":"sensitive_behavior_statement_of_system_services_detail_picker",
+            "value":"[TS_939799]_Picker services need to read media data (images, videos, and audio), contacts, file data, and the list of installed apps, and enable the camera and microphone. The map picker service needs to connect to the Internet to read and upload/transfer location information."
+        },
+        {
+            "name":"sensitive_behavior_statement_of_system_services_detail_system_storage",
+            "value":"[TS_1053410]_System storage services need to read Calendar event data and read and modify contacts and call logs data."
+        },
+        {
+            "name":"sensitive_behavior_statement_of_system_services_detail_carrier",
+            "value":"[TS_1053413]_Carrier services need to connect to the Internet, read and upload/transfer this device's phone number(s), IMEI, Bluetooth and WLAN MAC addresses, and approximate location information, and send and receive SMS messages."
+        },
+        {
+            "name":"sensitive_behavior_statement_of_system_services_detail_colorpickerservice",
+            "value":"[TS_1177422]_The global color picker service needs to take screenshots in the background."
+        }
+    ]
+}
