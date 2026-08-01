@@ -258,7 +258,7 @@ In SceneBoard mode, do not register `entity.system.home` / `action.system.home` 
 **Step 5: Test**
 - Add tests for page controllers, components, and utility classes under `product/phone/src/ohosTest/`.
 - Cover forward, back, skip, external-page exception, and other paths.
-- Verify layout, rotation, folding state, language, and accessibility behavior on target Phone / Pad product forms.
+- Verify layout, rotation, folding state, and language behavior on target Phone / Pad product forms.
 
 ## Directory
 

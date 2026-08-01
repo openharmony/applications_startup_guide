@@ -49,11 +49,11 @@ StartupGuide 位于应用层，由 SceneBoard 显式拉起；引导过程中通�
 ![StartupGuide 分层架构](./docs/figures/oobe_architecture.png)
 
 图中右侧系统应用与前文保持一致：
-- **SceneBoard**：启动 OOBE，并在引导期间限制其他应用窗口显示，确保开机引导始终保持在前台。
+- **SceneBoard**：启动 OOBE，并在引导期间限制其它应用窗口显示，确保开机引导始终保持在前台。
 - **Settings（WLAN）**：提供 WLAN OOBE 扩展页，并承载相关系统配置。
 - **Settings / DataShare**：提供数据的读写能力。
 
-### StartupGuide 与其他系统应用的关系
+### StartupGuide 与其它系统应用的关系
 
 StartupGuide 与系统定位图右侧的 SceneBoard、Settings（含 WLAN OOBE 扩展页）协同，但不包含这些部件的完整业务实现。
 
