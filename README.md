@@ -28,15 +28,15 @@
 
 ### 支持的引导页面
 
-| 页面 / PageKey | 所属模块 | 场景与处理概要           |
-| ---- | ---- |-------------------|
-| `WELCOME` | `feature/welcome` | 欢迎页及企业设备相关处理      |
-| `LANGUAGE_SELECT` | `feature/languageselect` | 语言选择         |
-| `REGION_SELECT` | `feature/regionselect` | 国家 / 地区选择         |
+| 页面 / PageKey | 所属模块 | 场景与处理概要 |
+| ---- | ---- | ---- |
+| `WELCOME` | `feature/welcome` | 欢迎页及企业设备相关处理 |
+| `LANGUAGE_SELECT` | `feature/languageselect` | 语言选择 |
+| `REGION_SELECT` | `feature/regionselect` | 国家 / 地区选择 |
 | `BASIC_SERVICE` | `feature/basicservice` | 基础服务条款 / 最终用户许可协议 |
-| `ENHANCED_SERVICE` | `feature/enhanceservice` | 增强服务声明     |
-| `WLAN_KEY` | `product/phone` 外部控制器 | 连接网络页面    |
-| `EXPERIENCE_NOW` | `feature/experience` | 完成引导并进入桌面         |
+| `ENHANCED_SERVICE` | `feature/enhanceservice` | 增强服务声明 |
+| `WLAN_KEY` | `product/phone` 外部控制器 | 连接网络页面 |
+| `EXPERIENCE_NOW` | `feature/experience` | 完成引导并进入桌面 |
 
 ## 架构说明
 
@@ -74,13 +74,11 @@ StartupGuide 与系统定位图右侧的 SceneBoard、Settings（含 WLAN OOBE �
 
 产品层负责系统交互入口和设备形态适配；特性层承载完整引导步骤；公共层提供跨特性复用的页面、场景、存储和窗口能力。
 
-
-| 层次 | 主要目录 / 组件 | 说明                                                           |
-| ---- | ---- |--------------------------------------------------------------|
+| 层次 | 主要目录 / 组件 | 说明 |
+| ---- | ---- | ---- |
 | 产品层 | `product/phone` | `GuideHomeAbility`、页面链组装、外部页面控制器及产品形态组件封装；当前提供 Phone、Pad 入口。 |
-| 特性层 | `feature/*` | 欢迎、语言、地区、基础服务、增强服务和立即体验等独立 HAR                               |
-| 公共层 | `common` | 页面加载与生命周期、场景识别、外部页面接入、数据持久化、窗口管控、事件和通用 UI                    |
-
+| 特性层 | `feature/*` | 欢迎、语言、地区、基础服务、增强服务和立即体验等独立 HAR |
+| 公共层 | `common` | 页面加载与生命周期、场景识别、外部页面接入、数据持久化、窗口管控、事件和通用 UI |
 
 ### 部件与外部依赖
 
@@ -138,7 +136,6 @@ sh build.sh
 | ---- | ---- | ---- |
 | 签名 HAP | `product/phone/build/default/outputs/default/phone_startupguide-default-signed.hap` | 可安装的默认签名产物 |
 
-
 ## StartupGuide 开发
 
 StartupGuide 使用 **ArkTS** 开发。产品层负责入口与页面编排，Feature 层承载独立特性，Common 层提供跨特性基础能力。
@@ -176,7 +173,130 @@ export class WlanPageController extends BaseExternalPageController {
 - 页面控制器：`feature/enhanceservice/src/main/ets/controller/EnhanceServicePageController.ets`
 - 状态保存：`feature/enhanceservice/src/main/ets/util/EnhanceServiceUtil.ets`
 
-配置项通过 packageName、moduleName 和 serviceName 定位业务应用 metadata；metadata 必须指向 `rawfile:*.json` 协议资源。
+#### 协议接入 OOBE 指导
+
+协议类型分为两类：
+
+- **基础协议（协议与声明）**：用户必须同意后方可使用手机的基础协议。
+- **增强协议（增强服务与用户体验改进）**：用户可选的协议，支持逐项勾选。
+
+开机向导服务声明的接入方式主要分为两块：
+
+- 在开机向导代码仓中配置声明信息。
+- 在业务方代码仓中定义声明的版本号、标题、内容及参数等信息。
+
+##### 服务声明接入方式
+
+**1. 开机向导代码仓修改**
+
+在 `basic_service_statements.json` 配置文件中添加对应的基础服务声明配置。
+
+- 手机产品路径：`product/phone/src/main/resources/rawfile/basic_service_statements.json`
+
+在 `enhance_service_statements.json` 配置文件中添加对应的增强服务声明配置。
+
+- 手机产品路径：`product/phone/src/main/resources/rawfile/enhance_service_statements.json`
+
+**配置示例（基础协议）**
+
+```json
+[
+  {
+    "serviceType": "basic",
+    "serviceName": "test_basic_statement",
+    "moduleName": "entry",
+    "packageName": "com.example.teststartupguide",
+    "validatorList": [],
+    "checkboxList": ["settings=test_basic_status"],
+    "saveDataList": ["settings=test_basic_status"]
+  }
+]
+```
+
+**配置示例（增强协议）**
+
+```json
+[
+  {
+    "serviceType": "enhance",
+    "serviceName": "test_enhance_statement",
+    "moduleName": "entry",
+    "packageName": "com.example.teststartupguide",
+    "validatorList": [],
+    "checkboxList": ["settings=test_enhance_status"],
+    "saveDataList": ["settings=test_enhance_status"]
+  }
+]
+```
+
+**配置参数说明**
+
+| 参数名 | 说明 | 示例 |
+| ---- | ---- | ---- |
+| `serviceType` | 必填。协议类型，`"basic"` 表示基础协议，`"enhance"` 表示增强协议，其他值无效 | `"basic"` |
+| `serviceName` | 必填。业务接入方 metadata 中的 name 值 | `"test_enhance_statement"` |
+| `moduleName` | 必填。业务接入方 metadata 所属的模块名 | `"entry"` |
+| `packageName` | 必填。业务接入方包名 | `"com.example.teststartupguide"` |
+| `validatorList` | 可选。显示控制字段，用于指定是否显示的判断条件，支持 SysParameter、SettingsData、Custom 三种方式 | `["sysparameter=const.xxx.yyy=zzz"]` |
+| `checkboxList` | 可选。历史选中状态，主要用于 OTA 升级场景中判断历史勾选状态。该字段需为 `saveDataList` 的子集，可配置一个字段。指定表名示例：`["settings=xxx, test_enhance_status"]`；不指定表名示例：`["settings=test_enhance_status"]`（默认存储于 global 表，与底层 settings 行为保持一致） | `["settings=test_enhance_status"]` |
+| `saveDataList` | 可选。存储 settings 数据，可配置多个字段。存储值为 1 表示勾选，0 表示未勾选。指定表名示例：`["settings=xxx, test_enhance_status"]`；不指定表名示例：`["settings=test_enhance_status"]`（默认存储于 global 表） | `["settings=test_enhance_status"]` |
+| `defaultCheckStatus` | 可选。首次进入页面时的默认开关状态，默认为开启（true），如需默认关闭可配置为 false | `false` |
+
+**2. 业务侧代码修改**
+
+**2.1 配置 metadata 信息**
+
+在业务侧代码中配置与开机向导对应的 metadata 信息，样例如下（请根据实际框架补充）。
+
+**2.2 配置服务声明内容 JSON 文件**
+
+```json
+{
+  "version": "1.0",
+  "title": "$string:statement_test_title",
+  "content": "$string:statement_test_content",
+  "params": [
+    {
+      "name": "param1",
+      "value": "我的"
+    },
+    {
+      "name": "param2",
+      "value": "$string:param_value_2"
+    }
+  ],
+  "abilities": [
+    {
+      "key": "测试",
+      "value": {
+        "bundleName": "com.example.teststartupguide",
+        "abilityName": "EntryAbility",
+        "parameters": {
+          "ability.want.params.uiExtensionType": "您的type",
+          "msg": "测试"
+        }
+      }
+    },
+    {
+      "key": "r",
+      "value": {
+        "bundleName": "com.example.teststartupguide",
+        "abilityName": "EntryAbility",
+        "parameters": {
+          "ability.want.params.uiExtensionType": "sys/commonUI"
+        }
+      }
+    }
+  ],
+  "appLists": [
+    {
+      "name": "xxxxx",
+      "content": "xxxxxxx",
+      "key": "xxxxx"
+    }
+  ]
+}
+```
 
 **常用修改入口：**
 
@@ -208,8 +328,8 @@ export class WlanPageController extends BaseExternalPageController {
 1. 继承 `BaseExternalPageController`。
 2. 在页面配置中声明目标 bundleName、abilityName、参数及返回语义。
 3. 校验 NEXT、PRE、SUBPAGE、CRASH 等返回路径。
-4. 实现对应方法，如：isneedshow控制页面显隐 跳转下一页 等
-   
+4. 实现对应方法，如：`isNeedShow()` 控制页面显隐、跳转下一页等。
+
 **步骤 4：配置入口与权限**
 
 入口已在 `product/phone/src/main/module.json5` 中声明：
