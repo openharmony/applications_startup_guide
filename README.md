@@ -185,17 +185,19 @@ export class WlanPageController extends BaseExternalPageController {
 - 在开机向导代码仓中配置声明信息。
 - 在业务方代码仓中定义声明的版本号、标题、内容及参数等信息。
 
-##### 服务声明接入方式
+#### 服务声明接入方式
 
 **1. 开机向导代码仓修改**
 
 在 `basic_service_statements.json` 配置文件中添加对应的基础服务声明配置。
 
 - 手机产品路径：`product/phone/src/main/resources/rawfile/basic_service_statements.json`
+- 针对基础协议页面，需在 `product/phone/src/main/resources/rawfile/html/endUserSoftwareLicense/` 对应语言目录下修改 HTML 文件中的更新日期、协议内容及版本号
 
 在 `enhance_service_statements.json` 配置文件中添加对应的增强服务声明配置。
 
 - 手机产品路径：`product/phone/src/main/resources/rawfile/enhance_service_statements.json`
+- 在业务方代码仓中配置声明资源，包括协议版本号、标题、协议内容及参数等信息
 
 **配置示例（基础协议）**
 
