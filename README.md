@@ -51,7 +51,7 @@ StartupGuide 位于应用层，由 SceneBoard 显式拉起；引导过程中通�
 图中右侧系统应用与前文保持一致：
 - **SceneBoard**：启动 OOBE，并在引导期间限制其它应用窗口显示，确保开机引导始终保持在前台。
 - **Settings（WLAN）**：提供 WLAN OOBE 扩展页，并承载相关系统配置。
-- **Settings / DataShare**：提供数据的读写能力。
+- **settingsData**：提供数据的读写能力。
 
 ### StartupGuide 与其它系统应用的关系
 
@@ -61,7 +61,7 @@ StartupGuide 与系统定位图右侧的 SceneBoard、Settings（含 WLAN OOBE �
 1. SceneBoard 的 `SCBOobeManager` 在需要开机引导时，通过 bundleName `com.ohos.startupguide` 显式拉起 `com.ohos.startupguide.MainAbility`；其 `srcEntry` 指向 `GuideHomeAbility.ets`。
 2. StartupGuide 通过 `SceneTypeManager` 识别场景，再由 `PageOrderController` 组装对应页面链。
 3. WLAN 步骤由 `WlanPageController` 经外部页面接入框架拉起 Settings 的 `OobeWifiSettingsExtensionAbility`，外部页面完成后按 NEXT / PRE 等结果返回引导链。
-4. 语言、地区、协议同意和 OOBE 完成状态通过 Settings / DataShare 等系统能力读写。
+4. 语言、地区、协议同意和 OOBE 完成状态通过 settingsData 等系统能力读写。
 5. 引导完成后，StartupGuide 更新 `device_provisioned` 状态并交还系统桌面。
 
 > 一次典型的初次开机流程：
@@ -98,7 +98,7 @@ product/phone (phone_startupguide)
 跨进程协作边界如下：
 - SceneBoard 负责启动与 OOBE 阶段系统霸屏。
 - WLAN 等系统应用提供具体业务页面。
-- Settings / DataShare 提供数据库存储。
+- settingsData 提供数据库存储。
 - BundleManager 与 ResourceManager 用于读取业务应用 metadata 和协议资源。
 
 ### 模块说明
@@ -175,29 +175,14 @@ export class WlanPageController extends BaseExternalPageController {
 
 #### 协议接入 OOBE 指导
 
-协议类型分为两类：
+#### 基础协议（协议与声明）
 
-- **基础协议（协议与声明）**：用户必须同意后方可使用手机的基础协议。
-- **增强协议（增强服务与用户体验改进）**：用户可选的协议，支持逐项勾选。
-
-开机向导服务声明的接入方式主要分为两块：
-
-- 在开机向导代码仓中配置声明信息。
-- 在业务方代码仓中定义声明的版本号、标题、内容及参数等信息。
-
-#### 服务声明接入方式
-
-**1. 开机向导代码仓修改**
+用户必须同意后方可使用手机的基础协议。
 
 在 `basic_service_statements.json` 配置文件中添加对应的基础服务声明配置。
 
 - 手机产品路径：`product/phone/src/main/resources/rawfile/basic_service_statements.json`
 - 针对基础协议页面，需在 `product/phone/src/main/resources/rawfile/html/endUserSoftwareLicense/` 对应语言目录下修改 HTML 文件中的更新日期、协议内容及版本号
-
-在 `enhance_service_statements.json` 配置文件中添加对应的增强服务声明配置。
-
-- 手机产品路径：`product/phone/src/main/resources/rawfile/enhance_service_statements.json`
-- 在业务方代码仓中配置声明资源，包括协议版本号、标题、协议内容及参数等信息
 
 **配置示例（基础协议）**
 
@@ -214,6 +199,15 @@ export class WlanPageController extends BaseExternalPageController {
   }
 ]
 ```
+
+#### 增强协议（增强服务与用户体验改进）
+
+用户可选的协议，支持逐项勾选。
+
+在 `enhance_service_statements.json` 配置文件中添加对应的增强服务声明配置。
+
+- 手机产品路径：`product/phone/src/main/resources/rawfile/enhance_service_statements.json`
+- 在业务方代码仓中配置声明资源，包括协议版本号、标题、协议内容及参数等信息
 
 **配置示例（增强协议）**
 
@@ -244,13 +238,13 @@ export class WlanPageController extends BaseExternalPageController {
 | `saveDataList` | 可选。存储 settings 数据，可配置多个字段。存储值为 1 表示勾选，0 表示未勾选。指定表名示例：`["settings=xxx, test_enhance_status"]`；不指定表名示例：`["settings=test_enhance_status"]`（默认存储于 global 表） | `["settings=test_enhance_status"]` |
 | `defaultCheckStatus` | 可选。首次进入页面时的默认开关状态，默认为开启（true），如需默认关闭可配置为 false | `false` |
 
-**2. 业务侧代码修改**
+**业务侧代码修改**
 
-**2.1 配置 metadata 信息**
+**1. 配置 metadata 信息**
 
 在业务侧代码中配置与开机向导对应的 metadata 信息，样例如下（请根据实际框架补充）。
 
-**2.2 配置服务声明内容 JSON 文件**
+**2. 配置服务声明内容 JSON 文件**
 
 ```json
 {
