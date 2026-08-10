@@ -10,6 +10,9 @@
 /feature/*/oh_modules
 /oh_modules
 /product/*/oh_modules
-/hw_sign/hapsign-online-plugin.jar
-/hw_sign/hap-sign-tool.jar
+/signature/hapsign-online-plugin.jar
+/signature/hap-sign-tool.jar
+/signature/material/
+/product/phone/TEMP_DESKTOP_ICON_VERIFY.md
 /product/phone/.test
+/.local-debug/
