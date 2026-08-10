@@ -4,13 +4,13 @@
       {
         "name": "default",
         "material": {
-          "storeFile": "hw_sign/OpenHarmony.p12",
-          "storePassword": "00000016676A7176E76EFF87F44288205ABA8C8B6698B1102B5028DA1A149F03B588DA140A78",
+          "storeFile": "signature/OpenHarmony.p12",
+          "storePassword": "000000167923D615C123022DE035E71074ADDEAB63AD84B8BD2B7E1F6CD3F83015113D0C7C7E",
           "keyAlias": "OpenHarmony Application Release",
-          "keyPassword": "00000016CBEF89E0DEC707F2B0C047C3868DCF5E40603C79597773CE580CAA2E8864C30376D5",
+          "keyPassword": "0000001681415C241AD9D720530FBDF9DF99CCA9AB18B4293CF84D54D02E1A90C4A53C0E97FA",
           "signAlg": "SHA256withECDSA",
-          "profile": "hw_sign/hwstartupguide.p7b",
-          "certpath": "hw_sign/OpenHarmony.cer"
+          "profile": "signature/hwstartupguide.p7b",
+          "certpath": "signature/OpenHarmony.cer"
         }
       }
     ],

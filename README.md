@@ -8,6 +8,16 @@
 
 ### 核心能力
 
+**引导场景识别**
+- 查询 settingsData 数据库中 OOBE 的标记位区分初次开机和回厂
+- 预置场景：sceneboard启动时，通过读取OOBE标记位来判断是否拉起OOBE。`device_provisioned`为0或者不存在时，会拉起OOBE走开机或恢复出厂流程。OOBE流程走完后，`device_provisioned`值设为1
+- OTA 场景：`is_ota_finished` 为 0 时进入回厂OOBE；不为 0 时，再根据 `buildversionrelease` 判断版本号。若有协议变更，则展示对应页面（基础服务变更展示基础服务，增强服务变更展示增强服务）。
+
+| 字段 | device_provisioned | is_ota_finished |
+| ---- | ---- | ---- |
+| 标记位含义 | 设备是否已经完成激活 | 标识是否OTA未完成场景 |
+| 数据库中的表名 | (设备级) SETTINGSDATA | (用户级) USER_SETTINGSDATA_SECURE_XXX |
+
 **欢迎**
 - 展示开机欢迎界面，引导用户开始初始设置。
 
@@ -48,69 +58,36 @@ StartupGuide 位于应用层，由 SceneBoard 显式拉起；引导过程中通�
 
 ![StartupGuide 分层架构](./docs/figures/oobe_architecture.png)
 
-图中右侧系统应用与前文保持一致：
-- **SceneBoard**：启动 OOBE，并在引导期间限制其它应用窗口显示，确保开机引导始终保持在前台。
-- **Settings（WLAN）**：提供 WLAN OOBE 扩展页，并承载相关系统配置。
-- **settingsData**：提供数据的读写能力。
+### 应用层分层设计
 
-### StartupGuide 与其它系统应用的关系
+整体可划分为产品层、特性层、公共层：
 
-StartupGuide 与系统定位图右侧的 SceneBoard、Settings（含 WLAN OOBE 扩展页）协同，但不包含这些部件的完整业务实现。
+| 层次 | 主要目录 / 组件 | 说明                                                     |
+| ---- | ---- |--------------------------------------------------------|
+| 产品层 | `product` | 支持手机、平板形态；承载 `GuideHomeAbility`、页面链组装、外部页面控制器及产品形态组件封装 |
+| 特性层 | `feature/welcome`、`feature/languageselect`、`feature/regionselect`、`feature/basicservice`、`feature/enhanceservice`、`feature/experience` | 欢迎、语言选择、地区选择、基础服务、增强服务、立即体验                            |
+| 公共层 | `common` | 页面加载、页面生命周期管理、外部页接入、场景识别、数据持久化、窗口管控、日志工具               |
 
-**事件与调用关系如下：**
-1. SceneBoard 的 `SCBOobeManager` 在需要开机引导时，通过 bundleName `com.ohos.startupguide` 显式拉起 `com.ohos.startupguide.MainAbility`；其 `srcEntry` 指向 `GuideHomeAbility.ets`。
-2. StartupGuide 通过 `SceneTypeManager` 识别场景，再由 `PageOrderController` 组装对应页面链。
-3. WLAN 步骤由 `WlanPageController` 经外部页面接入框架拉起 Settings 的 `OobeWifiSettingsExtensionAbility`，外部页面完成后按 NEXT / PRE 等结果返回引导链。
-4. 语言、地区、协议同意和 OOBE 完成状态通过 settingsData 等系统能力读写。
-5. 引导完成后，StartupGuide 更新 `device_provisioned` 状态并交还系统桌面。
+**特性层模块说明：**
 
-> 一次典型的初次开机流程：
-> - SceneBoard 拉起 `com.ohos.startupguide.MainAbility`；
-> - `SceneTypeManager` 判定为 `FIRST_BOOT_SCENE`；
-> - `PageOrderController` 组装欢迎 → 语言 → 地区 → 基础服务 → 增强服务 → WLAN → 立即体验；
-> - 用户完成最后一页后，StartupGuide 保存完成状态并进入系统桌面。
-
-### 分层设计
-
-产品层负责系统交互入口和设备形态适配；特性层承载完整引导步骤；公共层提供跨特性复用的页面、场景、存储和窗口能力。
-
-| 层次 | 主要目录 / 组件 | 说明 |
+| 核心能力 | 模块 | 说明 |
 | ---- | ---- | ---- |
-| 产品层 | `product/phone` | `GuideHomeAbility`、页面链组装、外部页面控制器及产品形态组件封装；当前提供 Phone、Pad 入口。 |
-| 特性层 | `feature/*` | 欢迎、语言、地区、基础服务、增强服务和立即体验等独立 HAR |
-| 公共层 | `common` | 页面加载与生命周期、场景识别、外部页面接入、数据持久化、窗口管控、事件和通用 UI |
+| 欢迎 | `WelcomePageController`（welcome） | 展示开机欢迎界面，引导用户开始初始设置 |
+| 语言选择 | `LanguageSelectPageController`（languageselect） | 供用户选择系统显示语言，并使后续引导页面使用所选语言 |
+| 地区选择 | `RegionSelectPageController`（regionselect） | 供用户选择所在国家或地区，为后续系统服务提供区域信息 |
+| 基础服务 | `BasicServicePageController`（basicservice） | 展示最终用户许可协议及基础服务条款，并保存用户同意状态 |
+| 增强服务 | `EnhanceServicePageController`（enhanceservice） | 根据配置展示可选增强服务协议，并保存用户勾选结果 |
+| 立即体验 | `ExperiencePageController`（experience） | 完成 OOBE 引导，保存完成状态并进入系统桌面 |
 
-### 部件与外部依赖
+### 与其他应用的关系
 
-`phone_startupguide` 是入口 HAP，各 Feature 与 Common 以本地 HAR 方式被入口模块依赖：
-
-```text
-product/phone (phone_startupguide)
-├── @ohos/hwstartupguide.common
-├── @ohos/hwstartupguide.basicservice
-├── @ohos/hwstartupguide.enhanceservice
-├── @ohos/hwstartupguide.languageselect
-├── @ohos/hwstartupguide.regionselect
-├── @ohos/hwstartupguide.welcome
-└── @ohos/hwstartupguide.experience
-```
-
-跨进程协作边界如下：
-- SceneBoard 负责启动与 OOBE 阶段系统霸屏。
-- WLAN 等系统应用提供具体业务页面。
-- settingsData 提供数据库存储。
-- BundleManager 与 ResourceManager 用于读取业务应用 metadata 和协议资源。
-
-### 模块说明
-
-| 模块 | 路径 | 说明 |
-| ---- | ---- | ---- |
-| 基础服务 | `feature/basicservice/` | 最终用户许可协议及基础服务条款 |
-| 增强服务 | `feature/enhanceservice/` | 协议配置、业务应用 metadata 读取、勾选状态保存 |
-| 欢迎 | `feature/welcome/` | 欢迎引导步骤的 Controller、Component 与 Model |
-| 语言 | `feature/languageselect/` | 语言选择步骤的 Controller、Component 与 Model |
-| 地区 | `feature/regionselect/` | 地区选择步骤的 Controller、Component 与 Model |
-| 体验 | `feature/experience/` | 立即体验步骤的 Controller、Component 与 Model |
+| 项目 | 说明 |
+| ---- | ---- |
+| 是否允许其他应用调用 | 允许。入口 Ability `com.ohos.startupguide.MainAbility`（`GuideHomeAbility`）声明 `exported=true`，由系统侧显式拉起 |
+| 谁能调用 | SceneBoard 通过 `SCBOobeManager` 拉起 OOBE；Settings 提供 WLAN OOBE 扩展页 `OobeWifiSettingsExtensionAbility`，由 StartupGuide 经外部页接入框架拉起 |
+| 什么时候能调用 | 初次开机、恢复出厂设置等需要开机引导时，由 SceneBoard 拉起；WLAN 步骤在引导页面链执行到网络配置时接入 |
+| 支持的 Want 参数 | SceneBoard 按约定 bundleName `com.ohos.startupguide` 显式启动 `MainAbility`；WLAN 外部页通过页面配置中的 bundleName / abilityName / UIExtension 参数接入 |
+| 跨进程服务 | 语言、地区、协议同意和 OOBE 完成状态通过 Settings Data 读写；界面依赖 ArkUI，Ability 生命周期与扩展能力依赖 AbilityKit；引导完成后更新 `device_provisioned` 并交还系统桌面 |
 
 ## 编译构建
 
@@ -118,7 +95,7 @@ product/phone (phone_startupguide)
 
 ### 环境要求
 
-- OpenHarmony SDK：`compileSdkVersion` 23，`compatibleSdkVersion` / `targetSdkVersion` 20
+- Openharmony SDK: compileSdkVersion 26, compatibleSdkVersion 20
 - DevEco Studio 或命令行 Hvigor 工具链
 - Node.js 与 OHPM
 

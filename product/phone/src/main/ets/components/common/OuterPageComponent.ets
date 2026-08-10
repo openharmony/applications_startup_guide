@@ -53,6 +53,7 @@ export struct OuterPageComponent {
   }
 
   aboutToDisappear(): void {
+    this.finishAnimation();
     LogUtil.info(TAG, 'aboutToDisappear');
   }
 

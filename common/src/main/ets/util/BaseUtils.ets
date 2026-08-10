@@ -26,6 +26,7 @@ import { SystemParameterUtil } from './SystemParameterUtil';
 
 const TAG: string = 'BaseUtils';
 const DEVICE_TYPE_PHONE = 'phone';
+const DEVICE_TYPE_DEFAULT = 'default';
 const DEVICE_TYPE_PC = '2in1';
 const DEVICE_TYPE_PAD = 'tablet';
 const FOLD_SCREEN_PRODUCT_PROPERTY: string = 'const.window.foldscreen.type';
@@ -57,7 +58,9 @@ export class DeviceUtil {
    * @return true: 手机  false: 非手机
    */
   static isDevicePhone(): boolean {
-    return deviceInfo.deviceType === DEVICE_TYPE_PHONE;
+    // deviceType=default 按手机处理（部分开发板/镜像未上报 phone）
+    return deviceInfo.deviceType === DEVICE_TYPE_PHONE ||
+      deviceInfo.deviceType === DEVICE_TYPE_DEFAULT;
   }
 
   static isDevicePc(): boolean {

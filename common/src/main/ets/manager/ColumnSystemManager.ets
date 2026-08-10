@@ -226,7 +226,8 @@ export class ColumnSystemManager {
     }
     let footBtnWidth: number = DEFAULT_BTN_WIDTH;
     if (this.columnCount === ColumnCount.SM_COLUMN_COUNT) {
-      footBtnWidth = ColumnSystemManager.getInstance().getCustomWidthVp(2, 2);
+     footBtnWidth = Math.min(DEFAULT_BTN_WIDTH,
+        ColumnSystemManager.getInstance().getCustomWidthVp(2, 2));
     } else if (DeviceUtil.isDevicePc()) {
       footBtnWidth = ColumnSystemManager.getInstance().getCustomWidthVp(2, 0);
     } else {
