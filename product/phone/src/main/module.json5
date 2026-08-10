@@ -38,10 +38,12 @@
         "orientation": "auto_rotation_restricted",
         "startWindowIcon": "$media:background",
         "startWindowBackground": "$color:start_window_background",
-        "visible": false,
+        "exported": true,
+        "visible": true,
         // NOTE: 不再注册 entity.system.home / action.system.home。
         // 本设备为 SceneBoard 模式，由 SceneBoard(SCBOobeManager) 显式拉起 OOBE；
         // 若声明系统桌面会抢占开机 home 槽位导致 SceneBoard 不启动、scb 不存在而卡开机。
+        // exported/visible=true 便于调试期 hdc aa start；正式预装可改回 false。
         "skills": [
           {
             "actions": [
@@ -140,6 +142,12 @@
       },
       {
         "name": "ohos.permission.CALLED_BELOW_LOCK_SCREEN"
+      },
+      {
+        "name": "ohos.permission.WINDOW_TOPMOST"
+      },
+      {
+        "name": "ohos.permission.SYSTEM_FLOAT_WINDOW"
       },
       {
         "name": "ohos.permission.ACCESS_EXTENSIONAL_DEVICE_DRIVER"

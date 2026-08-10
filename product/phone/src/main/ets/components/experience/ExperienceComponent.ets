@@ -51,7 +51,6 @@ export function ExperienceComponentLoader($$: IPageController | null | undefined
 export struct ExperienceComponent {
   protected mPageController: ExperiencePageController | null = null;
   @State videoPath: Resource | string = '';
-  @State backgroundPath: Resource | string = '';
   @State mLogoWidth: number = 0;
   @State logoPosition: string = '45%';
 
@@ -79,7 +78,6 @@ export struct ExperienceComponent {
       EnterHomeComponent({
         // mLogoWidth: this.mLogoWidth + 'px', // 原 NEXT 横条 Logo 按屏宽像素计算
         mLogoWidth: this.mLogoWidth > 0 ? this.mLogoWidth + 'px' : '40%',
-        srcPath: this.backgroundPath,
         logoPosition: this.logoPosition,
         // mLogoImage: $r('app.media.ic_next_logo_6'),
         mLogoImage: $r('app.media.ic_openharmony_logo'),
@@ -99,7 +97,6 @@ export struct ExperienceComponent {
   private addFoldedListener(): void {
     ScreenStateMonitor.getInstance().registerScreenStateChangeListener(TAG,
       (oldScreenState: ScreenStateModel, screenState: ScreenStateModel) => {
-        this.setBackgroundPath(screenState);
         this.setLogoWidth(screenState);
         this.getPosition(screenState);
       });
@@ -131,18 +128,6 @@ export struct ExperienceComponent {
       this.videoPath = mediaConfigManager.getMediaResource(MediaConfigConstants.ENTER_HOME,
         MediaConfigConstants.PORTRAIT_SCREEN);
       LogUtil.info(TAG, 'use portrait resource');
-    }
-  }
-
-  setBackgroundPath(screenState: ScreenStateModel): void {
-    if (DeviceUtil.isUseLandscapeResource(screenState)) {
-      this.backgroundPath = mediaConfigManager.getMediaResource(MediaConfigConstants.BACKGROUND,
-        MediaConfigConstants.LANDSCAPE_SCREEN);
-      LogUtil.info(TAG, 'use landscape background');
-    } else {
-      this.backgroundPath = mediaConfigManager.getMediaResource(MediaConfigConstants.BACKGROUND,
-        MediaConfigConstants.PORTRAIT_SCREEN);
-      LogUtil.info(TAG, 'use portrait background');
     }
   }
 
@@ -185,7 +170,6 @@ export struct ExperienceComponent {
       this.addFoldedListener();
     }
     const screenState = ScreenStateMonitor.getInstance().getCurrentScreenStateModel();
-    this.setBackgroundPath(screenState);
     this.setLogoWidth(screenState);
     this.getPosition(screenState);
     HiSysEventUtil.reportUserEvent(CommonConstant.NEXT_PAGE_BUTTON, `${CommonConstant.COMPONENT_APPEAR}, ${TAG}`);

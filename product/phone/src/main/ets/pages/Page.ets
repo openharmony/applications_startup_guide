@@ -41,6 +41,8 @@ const IS_DEVICE_SMALL_FOLD: boolean = DeviceUtil.isSmallFoldScreen();
 const OFFSET_DISTANCE: number = 10;
 const ANIMATOR_TIME: number = 2500;
 const ANIMATOR_TOTAL_TIME: number = 15000;
+const BG_DECODE_SCALE: number = 1.1;
+const BG_DECODE_MAX_EDGE: number = 2560;
 
 @Builder
 export function dummyFunction() {
@@ -55,6 +57,8 @@ struct Page {
   @State mPageConfigs: Array<PageConfig | null | undefined> = [new PageConfig('')];
   @State bgTranslate: number = -OFFSET_DISTANCE;
   @State bgImagePath: Resource | string = '';
+  @State bgSourceWidth: number = 1920;
+  @State bgSourceHeight: number = 1080;
   @StorageLink('refreshId') refreshId: number = 1;
   @StorageLink('isPortraitOrientation') isPortraitOrientation: boolean = false;
   @StorageLink('isScreenOn') @Watch('playConditionChange')isScreenOn: boolean = true;
@@ -156,7 +160,7 @@ struct Page {
   }
 
   /**
-   * 统一静态背景图（竖版）
+   * 静态背景图（按屏解码，避免 ball_bg_port 等超大 PNG 整图进内存）
    */
   @Builder
   loadBgImageComponent(): void {
@@ -164,6 +168,10 @@ struct Page {
       Image(this.bgImagePath)
         .width('100%')
         .height('100%')
+        .sourceSize({
+          width: this.bgSourceWidth,
+          height: this.bgSourceHeight
+        })
         .scale({
           x: 1.1,
           y: 1.1
@@ -175,7 +183,8 @@ struct Page {
         .objectFit(ImageFit.Cover)
         .accessibilityLevel('no-hide-descendants')
         .onComplete(() => {
-          LogUtil.info(TAG, 'background image loaded');
+          LogUtil.info(TAG,
+            `background image loaded, sourceSize=${this.bgSourceWidth}x${this.bgSourceHeight}`);
           BgVideoPlayerManager.getInstance().isLoadFinished = true;
         })
         .onError(() => {
@@ -195,12 +204,45 @@ struct Page {
    */
 
   /**
-   * 设置统一竖版背景图资源
+   * 按显示分辨率计算解码尺寸，长边封顶避免大桌面仍解码过大
+   */
+  private updateBgSourceSize(): void {
+    try {
+      const d = display.getDefaultDisplaySync();
+      let width = Math.ceil(d.width * BG_DECODE_SCALE);
+      let height = Math.ceil(d.height * BG_DECODE_SCALE);
+      const longEdge = Math.max(width, height);
+      if (longEdge > BG_DECODE_MAX_EDGE) {
+        const scale = BG_DECODE_MAX_EDGE / longEdge;
+        width = Math.ceil(width * scale);
+        height = Math.ceil(height * scale);
+      }
+      this.bgSourceWidth = width;
+      this.bgSourceHeight = height;
+      LogUtil.info(TAG, `updateBgSourceSize display=${d.width}x${d.height} -> decode=${width}x${height}`);
+    } catch (error) {
+      this.bgSourceWidth = 1920;
+      this.bgSourceHeight = 1080;
+      LogUtil.error(TAG, `updateBgSourceSize error: ${error?.code}, ${error?.message}`);
+    }
+  }
+
+  /**
+   * 按设备形态选择背景图（portrait/landscape 映射见 media_configs.json）
    */
   private setBgImagePath(screenState: ScreenStateModel): void {
-    this.bgImagePath = mediaConfigManager.getMediaResource(MediaConfigConstants.BACKGROUND,
-      MediaConfigConstants.PORTRAIT_SCREEN);
-    LogUtil.info(TAG, `screenStateChange! use portrait background image, screenState: ${screenState.screenState}`);
+    this.updateBgSourceSize();
+    let bgType = 'PORTRAIT';
+    if (DeviceUtil.isUseLandscapeResource(screenState)) {
+      this.bgImagePath = mediaConfigManager.getMediaResource(MediaConfigConstants.BACKGROUND,
+        MediaConfigConstants.LANDSCAPE_SCREEN);
+      bgType = 'LANDSCAPE';
+    } else {
+      this.bgImagePath = mediaConfigManager.getMediaResource(MediaConfigConstants.BACKGROUND,
+        MediaConfigConstants.PORTRAIT_SCREEN);
+      bgType = 'PORTRAIT';
+    }
+    LogUtil.info(TAG, `screenStateChange! use ${bgType} background image, screenState: ${screenState.screenState}`);
   }
 
   /**

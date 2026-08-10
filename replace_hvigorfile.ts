@@ -42,9 +42,9 @@ const config = {
 };
 
 const signOptions: OnlineSignOptions = {
-  profile: 'hw_sign/hwstartupguide.p7b',
+  profile: 'signature/startupguide.p7b',
   keyAlias: 'HwStartupGuide HMOS',
-  hapSignToolFile: 'hw_sign/hap-sign-tool.jar', // 签名工具hap-sign-tool.jar的路径
+  hapSignToolFile: 'signature/hap-sign-tool.jar', // 签名工具hap-sign-tool.jar的路径
   username: `${process.env.ONLINE_USERNAME}`, // 环境变量中需要配置用户名和密码
   password: `${process.env.ONLINE_PASSWD}`,
   enableOnlineSign: true // 是否启用在线签名

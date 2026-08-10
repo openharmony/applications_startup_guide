@@ -21,6 +21,7 @@ import i18n from '@ohos.i18n';
 import {
   AbstractGuideAbility,
   CommonConstant,
+  DeviceUtil,
   GlobalContext,
   LogUtil,
   PageKey,
@@ -50,6 +51,7 @@ export default class GuideHomeAbility extends AbstractGuideAbility {
     try {
       LogUtil.info(this.tag, 'onWindowStageCreate');
       SceneTypeManager.getInstance().setNeedEduSpace(true);
+      this.lockPhonePortraitIfNeeded(windowStage);
       // 加载外部应用数据
       Promise.all([
         PageOrderController.getInstance().init(() => {
@@ -74,6 +76,14 @@ export default class GuideHomeAbility extends AbstractGuideAbility {
     } catch (e) {
       LogUtil.error(this.tag, `onWindowStageCreate Exception, code:${e?.code}, message:${e?.message}`);
     }
+  }
+
+  private lockPhonePortraitIfNeeded(windowStage: window.WindowStage): void {
+    if (!(DeviceUtil.isDevicePhone() && !DeviceUtil.isFold())) {
+      return;
+    }
+    WindowManager.setWindowOrientation(windowStage, window.Orientation.PORTRAIT);
+    LogUtil.info(this.tag, 'lock phone preferred orientation to PORTRAIT');
   }
 
   loadContent(windowStage: window.WindowStage, pageUrl: string): void {

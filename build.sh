@@ -55,7 +55,7 @@ build()
  ohpm_install "$PROJECT_PATH"
 
 # 获得签名jar文件
-    cd ./hw_sign
+    cd ./signature
     echo "----------------phone task----------------"
     chmod +x build.sh
     ./build.sh

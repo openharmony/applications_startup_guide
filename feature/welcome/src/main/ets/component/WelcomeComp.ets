@@ -94,6 +94,7 @@ export struct WelcomeComp {
           lottieData: LANGUAGE_ANIMATION,
           lottieWidth: this.lottieWidth,
           lottieHeight: LANGUAGE_ANIMATION_HEIGHT,
+          destroyOnDisAppear: true,
           autoplay: !this.hasWelcomeVideo(),
           callback: (animation: AnimationItem) => {
             this.animationItem = animation;
@@ -125,7 +126,13 @@ export struct WelcomeComp {
         .id(WELCOME_COMP_BUTTON_ID)
         .width(this.btnWidth)
         .height(this.btnHeight)
-        .backdropBlur(Color.Blue)
+        .constraintSize({
+          minWidth: this.btnWidth,
+          maxWidth: this.btnWidth,
+          minHeight: this.btnHeight,
+          maxHeight: this.btnHeight
+        })
+        .controlSize(ControlSize.NORMAL)
         .accessibilityText(this.accessibilityReadingText)
         .onAppear(() => {
           if (this.isNeedFocus) {

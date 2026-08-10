@@ -119,7 +119,7 @@ export class PageModel {
   }
 
   /**
-   * 设置屏幕方向，Pad暂时强制横屏，F态、M态（包括双折叠机型）强制竖屏，G态可旋转
+   * 设置屏幕方向：Pad 按 CCM；直板手机强制竖屏；折叠 F/M 竖屏，G 可旋转
    *
    * @param screenState 屏幕状态
    */
@@ -138,6 +138,11 @@ export class PageModel {
           Window.Orientation.LANDSCAPE);
         LogUtil.info(TAG, 'orientation set to LANDSCAPE.');
       }
+    } else if (DeviceUtil.isDevicePhone() && !DeviceUtil.isFold()) {
+      // 直板手机（含 deviceType=default）横握进 OOBE 时断点易判成 G 并走 AUTO_ROTATION，强制竖屏
+      WindowManager.setWindowOrientation((AppStorage.get<Window.WindowStage>('windowStage') as Window.WindowStage),
+        Window.Orientation.PORTRAIT);
+      LogUtil.info(TAG, 'orientation set to PORTRAIT (phone).');
     } else if (screenState.screenState === ScreenState.F || screenState.screenState === ScreenState.M) {
       WindowManager.setWindowOrientation((AppStorage.get<Window.WindowStage>('windowStage') as Window.WindowStage),
         Window.Orientation.PORTRAIT);
