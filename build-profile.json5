@@ -9,7 +9,7 @@
           "keyAlias": "OpenHarmony Application Release",
           "keyPassword": "0000001681415C241AD9D720530FBDF9DF99CCA9AB18B4293CF84D54D02E1A90C4A53C0E97FA",
           "signAlg": "SHA256withECDSA",
-          "profile": "signature/hwstartupguide.p7b",
+          "profile": "signature/startupguide.p7b",
           "certpath": "signature/OpenHarmony.cer"
         }
       }
