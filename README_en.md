@@ -1,101 +1,99 @@
-# StartupGuide
+# startup guide
 
 ## Introduction
 
-**StartupGuide** (bundle name: `com.ohos.startupguide`) is the **OOBE (Out Of Box Experience) startup guide system application** in the OpenHarmony standard system. It guides users through initial setup during first boot and factory reset.
+**startup guide** (bundle name: `com.ohos.startup_guide`) is the **OOBE (Out Of Box Experience) startup guide system application** in the OpenHarmony standard system. It guides users through initial setup during first boot and factory reset.
 
-This application is pre-installed by the system and does not show an icon on the desktop. In the SceneBoard process, `SCBOobeManager` explicitly starts `com.ohos.startupguide.MainAbility` through the agreed `BaseOOBEManager`; the implementation class of this Ability is `GuideHomeAbility`. After the guide is complete, StartupGuide writes the completion state and enters the system desktop. This repository currently provides phone and Pad entries.
+This application is pre-installed by the system and does not show an icon on the desktop. When the device boots, the system first starts the SceneBoard (SCB) process—SceneBoard is the system-level desktop process in the window subsystem; it hosts the desktop, lock screen, wallpaper, and other system UI, and manages screens and windows. After startup, its `SCBOobeManager` checks OOBE flags to decide whether to launch the startup guide. If guidance is required, it explicitly starts `com.ohos.startup_guide.MainAbility` (implemented by `GuideHomeAbility`). After the guide is complete, startup guide writes the completion state and enters the system desktop. This repository currently provides phone and Pad entries.
 
 ### Core Capabilities
 
 **Guide Scene Recognition**
 - Query OOBE flags in the settingsData database to distinguish first boot from factory reset
-- Preset scenario: when SceneBoard starts, it reads OOBE flags to decide whether to launch OOBE. If `device_provisioned` is 0 or does not exist, OOBE is launched for first boot or factory reset. After OOBE finishes, `device_provisioned` is set to 1
-- OTA scenario: if `is_ota_finished` is 0, factory-reset OOBE is entered; if it is not 0, the version is further checked using `buildversionrelease`. When an agreement has changed, the corresponding page is shown (basic service changes show Basic Service; enhanced service changes show Enhanced Service).
+- Preset scenario: after SceneBoard starts, it reads OOBE flags to decide whether to launch OOBE. If `device_provisioned` is 0 or does not exist, OOBE is launched for first boot or factory reset; after the flow finishes, `device_provisioned` is set to 1
+- OTA scenario: if `is_ota_finished` is 0, factory-reset OOBE is entered; if it is not 0, the version is further checked using `buildversionrelease`. When an agreement has changed, the corresponding page is shown (basic service changes show Basic Service; enhanced service changes show Enhanced Service)
 
 | Field | device_provisioned | is_ota_finished |
 | ---- | ---- | ---- |
-| Meaning | Whether the device has completed activation | Whether the scenario is OTA unfinished |
+| Flag meaning | Whether the device has completed activation | Whether the scenario is OTA unfinished |
 | Table in database | (device-level) SETTINGSDATA | (user-level) USER_SETTINGSDATA_SECURE_XXX |
 
-**Welcome**
-- Display the boot welcome page and guide the user to start initial setup.
+**Welcome:** Display the boot welcome page and guide the user to start initial setup.
 
-**Language Selection**
-- Allow the user to select the system display language, and apply the selected language to subsequent guide pages.
+**Language Selection:** Let the user pick the language the system will use; after that, the following guide pages are shown in the same language.
 
-**Country / Region Selection**
-- Allow the user to select a country or region and provide regional information for subsequent system services.
+**Country / Region Selection:** Allow the user to select a country or region and provide regional information for subsequent system services.
 
-**Basic Service Terms**
-- Display the End User License Agreement and basic service terms, and save the user's consent state.
+**Basic Service Terms:** Display the End User License Agreement and basic service terms, and save the user's consent state.
 
-**Enhanced Service**
-- Display optional enhanced service agreements based on configuration, and save the user's selection results.
+**Enhanced Service:** Display optional enhanced service agreements based on configuration, and save the user's selection results.
 
 **Experience Now**
 - Complete the OOBE guide, save the completion state, and enter the system desktop.
 
 ### Supported Guide Pages
 
-| Page / PageKey | Module | Scenario and Handling Summary |
-| ---- | ---- | ---- |
-| `WELCOME` | `feature/welcome` | Welcome page and enterprise-device-related handling |
-| `LANGUAGE_SELECT` | `feature/languageselect` | Language selection |
-| `REGION_SELECT` | `feature/regionselect` | Country / region selection |
-| `BASIC_SERVICE` | `feature/basicservice` | Basic service terms / End User License Agreement |
-| `ENHANCED_SERVICE` | `feature/enhanceservice` | Enhanced service statements |
-| `WLAN_KEY` | External controller in `product/phone` | Network connection page |
-| `EXPERIENCE_NOW` | `feature/experience` | Complete the guide and enter the desktop |
+| Page / PageKey                | Module | Scenario and Handling Summary |
+|-----------------------------| ---- | ---- |
+| `WELCOME`                   | `feature/welcome` | Welcome page and enterprise-device-related handling |
+| `LANGUAGE_SELECT`           | `feature/languageselect` | Language selection |
+| `REGION_SELECT`             | `feature/regionselect` | Country / region selection |
+| `BASIC_SERVICE`             | `feature/basicservice` | Basic service terms / End User License Agreement |
+| `ENHANCED_SERVICE`          | `feature/enhanceservice` | Enhanced service statements |
+| `LOADING`                   | `feature/otaservice` | Loading page in the OTA scenario |
+| `SERVICE_CHANGED_STATEMENT` | `feature/otaservice` | OTA agreement-change display (agreement capability) |
+| `WLAN_KEY`                  | External controller in `product/phone` | Network connection page |
+| `EXPERIENCE_NOW`            | `feature/experience` | Complete the guide and enter the desktop |
 
 ## Architecture
 
-StartupGuide uses a three-layer **Product - Feature - Common** modular architecture and collaborates with system components such as SceneBoard and Settings (including the WLAN OOBE extension page).
+startup guide uses a three-layer **Product - Feature - Common** modular architecture and collaborates with system components such as SceneBoard and Settings (including the WLAN OOBE extension page).
 
 ### Position in the System
 
-StartupGuide resides in the application layer and is explicitly started by SceneBoard. During the guide, it uses system frameworks for UI, Ability, window, and data access, and integrates the WLAN page and reads or writes system settings as needed.
+startup guide resides in the application layer and is explicitly started by SceneBoard. During the guide, it uses system frameworks for UI, Ability, window, and data access, and integrates the WLAN page and reads or writes system settings as needed.
 
-![StartupGuide Layered Architecture](./docs/figures/oobe_architecture_en.png)
+![startup guide Layered Architecture](./docs/figures/oobe_architecture_en.png)
 
 ### Application-Layer Design
 
 The overall design can be divided into the product layer, feature layer, and common layer:
 
 | Layer | Main Directories / Components | Description |
-| ---- | ---- | ---- |
+| ---- | ---- |--------------------------------------------------------|
 | Product | `product` | Supports phone and tablet form factors; hosts `GuideHomeAbility`, page-chain assembly, external page controllers, and product-form component wrappers |
-| Feature | `feature/welcome`, `feature/languageselect`, `feature/regionselect`, `feature/basicservice`, `feature/enhanceservice`, `feature/experience` | Welcome, language selection, region selection, basic service, enhanced service, and Experience Now |
-| Common | `common` | Page loading, page lifecycle management, external page integration, scene recognition, data persistence, window control, and logging utilities |
+| Feature | `feature/welcome`, `feature/languageselect`, `feature/regionselect`, `feature/basicservice`, `feature/enhanceservice`, `feature/experience`, `feature/otaservice` | Welcome, language selection, region selection, basic service, enhanced service, Experience Now, and OTA agreement capability |
+| Common | `common` | Page loading, page lifecycle management, external page integration, scene recognition, Preferences-based data persistence, window control, and logging utilities |
 
 **Feature Module Description:**
 
 | Capability | Module | Description |
 | ---- | ---- | ---- |
 | Welcome | `WelcomePageController` (welcome) | Display the boot welcome page and guide the user to start initial setup |
-| Language Selection | `LanguageSelectPageController` (languageselect) | Allow the user to select the system display language and apply it to subsequent guide pages |
+| Language Selection | `LanguageSelectPageController` (languageselect) | Let the user pick the language the system will use; after that, the following guide pages are shown in the same language |
 | Region Selection | `RegionSelectPageController` (regionselect) | Allow the user to select a country or region and provide regional information for subsequent system services |
 | Basic Service | `BasicServicePageController` (basicservice) | Display the End User License Agreement and basic service terms, and save the user's consent state |
 | Enhanced Service | `EnhanceServicePageController` (enhanceservice) | Display optional enhanced service agreements based on configuration, and save the user's selection results |
 | Experience Now | `ExperiencePageController` (experience) | Complete the OOBE guide, save the completion state, and enter the system desktop |
+| OTA Agreement | `LoadingPageController` and related (otaservice) | Agreement capability in the OTA scenario: loading page, agreement version comparison, and change display; necessary capabilities formerly under upgradeguide are merged here |
 
 ### Relationship with Other Applications
 
-| Item | Description |
-| ---- | ---- |
-| Whether other applications can call it | Allowed. The entry Ability `com.ohos.startupguide.MainAbility` (`GuideHomeAbility`) declares `exported=true` and is explicitly started by the system side |
-| Who can call it | SceneBoard launches OOBE through `SCBOobeManager`; Settings provides the WLAN OOBE extension page `OobeWifiSettingsExtensionAbility`, which StartupGuide starts through the external page integration framework |
+| Dimension | Description |
+|-------------| ---- |
+| Whether other applications can call it | Allowed. The entry Ability `com.ohos.startup_guide.MainAbility` (`GuideHomeAbility`) declares `exported=true` and is explicitly started by the system side |
+| Who can call it | SceneBoard launches OOBE through `SCBOobeManager`; Settings provides the WLAN OOBE extension page `OobeWifiSettingsExtensionAbility`, which startup guide starts through the external page integration framework |
 | When it can be called | During first boot, factory reset, and other scenarios that require startup guidance, SceneBoard launches it; the WLAN step is integrated when the guide page chain reaches network configuration |
-| Supported Want parameters | SceneBoard explicitly starts `MainAbility` with the agreed bundleName `com.ohos.startupguide`; the WLAN external page is integrated through bundleName / abilityName / UIExtension parameters in the page configuration |
+| Supported Want parameters | SceneBoard explicitly starts `MainAbility` with the agreed bundleName `com.ohos.startup_guide`; the WLAN external page is integrated through bundleName / abilityName / UIExtension parameters in the page configuration |
 | Cross-process services | Language, region, agreement consent, and OOBE completion states are read and written through Settings Data; the UI depends on ArkUI; Ability lifecycle and extension capabilities depend on AbilityKit; after the guide completes, `device_provisioned` is updated and control is returned to the system desktop |
 
 ## Build
 
-This project is a single-module HAP application project built with Hvigor. The entry module is `phone_startupguide`.
+This project is a single-HAP multi-module application project built with Hvigor. The entry module is `phone_startupguide`.
 
 ### Environment Requirements
 
-- OpenHarmony SDK: compileSdkVersion 26, compatibleSdkVersion 20
+- OpenHarmony SDK: compileSdkVersion 26.0.0, compatibleSdkVersion 23, targetSdkVersion 23
 - DevEco Studio or the command-line Hvigor toolchain
 - Node.js and OHPM
 
@@ -113,9 +111,9 @@ sh build.sh
 | ---- | ---- | ---- |
 | Signed HAP | `product/phone/build/default/outputs/default/phone_startupguide-default-signed.hap` | Installable default signed artifact |
 
-## StartupGuide Development
+## startup guide Development
 
-StartupGuide is developed with **ArkTS**. The product layer is responsible for entry and page orchestration, the Feature layer hosts independent features, and the Common layer provides cross-feature basic capabilities.
+startup guide is developed with **ArkTS**. The product layer is responsible for entry and page orchestration, the Feature layer hosts independent features, and the Common layer provides cross-feature basic capabilities.
 
 ### Development Based on Existing Modules
 
@@ -313,7 +311,7 @@ The entry is already declared in `product/phone/src/main/module.json5`:
     "name": "phone_startupguide",
     "type": "entry",
     "srcEntrance": "./ets/Application/AbilityStage.ets",
-    "mainElement": "com.ohos.startupguide.MainAbility",
+    "mainElement": "com.ohos.startup_guide.MainAbility",
     "deviceTypes": ["default"]
   }
 }
@@ -327,14 +325,13 @@ The entry is already declared in `product/phone/src/main/module.json5`:
 ## Directory
 
 ```text
-StartupGuide
+startup guide
 ├─AppScope
 │  ├─app.json5                          # bundleName, version, and app-level configuration
 │  └─resources/                         # Application icons and global resources
 ├─common                                # Shared HAR for the Common layer
 │  └─src/main/ets/
 │     ├─ability/                        # AbstractGuideAbility
-│     ├─api/                            # System capability type declarations
 │     ├─component/                      # Common UI components
 │     ├─constant/                       # PageKey, CommonConstant
 │     ├─context/                        # Common context wrappers
@@ -342,6 +339,7 @@ StartupGuide
 │     ├─event/                          # Inter-page events
 │     ├─manager/                        # Scene, page, media, window, and other managers
 │     ├─model/                          # Common models for page configs, service statements, layout styles, etc.
+│     ├─preferences/                    # Preferences wrappers (agreement selection, scene flags, and other local persistence)
 │     ├─storage/                        # KV storage
 │     ├─textparse/                      # Rich-text parsing for agreements
 │     ├─timer/                          # Timer abstractions and implementations
@@ -351,6 +349,7 @@ StartupGuide
 │  ├─enhanceservice/                    # Enhanced service agreements
 │  ├─experience/                        # Experience Now
 │  ├─languageselect/                    # Language and font size
+│  ├─otaservice/                        # OTA agreement capability (loading page, agreement change, etc.)
 │  ├─regionselect/                      # Country / region
 │  └─welcome/                           # Welcome page
 ├─product
@@ -359,8 +358,8 @@ StartupGuide
 │     ├─src/main/resources/             # Page configs, agreement configs, and multilingual resources
 ├─docs
 │  └─figures/
-│     ├─oobe_architecture.png            # StartupGuide Chinese layered architecture diagram
-│     └─oobe_architecture_en.png         # StartupGuide English layered architecture diagram
+│     ├─oobe_architecture.png            # startup guide Chinese layered architecture diagram
+│     └─oobe_architecture_en.png         # startup guide English layered architecture diagram
 ├─hvigor                                # Hvigor configuration
 ├─build.sh                              # Build script
 ├─hvigorfile.ts                         # Hvigor build entry
