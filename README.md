@@ -55,6 +55,7 @@ startup guide 位于应用层，由 SceneBoard 显式拉起；引导过程中通
 
 ![startup guide 分层架构](./docs/figures/oobe_architecture.png)
 
+### OOBE开机到结束流程图
 ![OOBE 启动到结束流程（简图）](./docs/figures/oobe_flow_simple.png)
 
 ### 应用层分层设计
