@@ -55,6 +55,9 @@ startup guide resides in the application layer and is explicitly started by Scen
 
 ![startup guide Layered Architecture](./docs/figures/oobe_architecture_en.png)
 
+### OOBE Boot-to-Finish Flow Diagram
+![OOBE Start-to-Finish Flow (Simple)](./docs/figures/oobe_flow_simple_en.png)
+
 ### Application-Layer Design
 
 The overall design can be divided into the product layer, feature layer, and common layer:
