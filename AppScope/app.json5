@@ -2,12 +2,12 @@
   "app": {
 //     Legacy bundleName: "com.ohos.openharmony.hwstartupguide" / "com.huawei.hmos.hwstartupguide"
 //     SceneBoard(SCBOobeManager) 通过该 bundleName 显式拉起 OOBE，必须与其常量一致。
-    "bundleName": "com.ohos.startupguide",
+    "bundleName": "com.ohos.startup_guide",
     "vendor": "ohos",
     "versionCode": 601000033,
     "versionName": "6.1.0.33",
     "icon": "$media:app_icon",
-    "label": "$string:HwStartupGuide_title",
+    "label": "$string:StartupGuide_title",
     "removable": false,
     "distributedNotificationEnabled": true,
     "minAPIVersion": 11,

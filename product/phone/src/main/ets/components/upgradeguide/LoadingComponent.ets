@@ -22,7 +22,7 @@ import {
   WindowManager,
 } from '@ohos/hwstartupguide.common';
 import { EnhanceServicePageController } from '@ohos/hwstartupguide.enhanceservice';
-import { LoadingPageController } from '@ohos/hwstartupguide.upgradeguide';
+import { LoadingPageController } from '@ohos/hwstartupguide.otaservice';
 import { PageOrderController } from '../../controller/PageOrderController';
 
 const TAG: string = 'LoadingComponent';

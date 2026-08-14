@@ -67,10 +67,6 @@
       "srcPath": "./feature/welcome",
     },
     {
-      "name": "hwstartupguide.upgradeguide",
-      "srcPath": "./feature/upgradeguide",
-    },
-    {
       "name": "hwstartupguide.otaservice",
       "srcPath": "./feature/otaservice",
     }

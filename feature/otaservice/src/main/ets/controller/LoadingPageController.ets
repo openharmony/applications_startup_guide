@@ -13,6 +13,25 @@
  * limitations under the License.
  */
 
-export { ServiceStatementUtil } from './src/main/ets/util/ServiceStatementUtil';
+import { BasePageController, IPageOrderController, PageKey } from '@ohos/hwstartupguide.common';
 
-export { LoadingPageController } from './src/main/ets/controller/LoadingPageController';
+/**
+ * LoadingPageController
+ */
+export class LoadingPageController extends BasePageController {
+  /**
+   * Constructor
+   *
+   * @param pageOrderController IPageOrderController
+   */
+  public constructor(pageOrderController: IPageOrderController) {
+    super(pageOrderController, PageKey.LOADING);
+  }
+
+  /**
+   * is need show
+   */
+  isNeedShow(): boolean {
+    return true;
+  }
+}
