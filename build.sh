@@ -83,7 +83,6 @@ build()
     mkdir -p build/outputs/oobe/source/feature/languageselect
     mkdir -p build/outputs/oobe/source/feature/otaservice
     mkdir -p build/outputs/oobe/source/feature/regionselect
-    mkdir -p build/outputs/oobe/source/feature/upgradeguide
     mkdir -p build/outputs/oobe/source/feature/welcome
     # cp -r 模块名目录/src build/outputs/xxx/source/模块名的目录
     cp -r product/phone/src build/outputs/oobe/source/product/phone
@@ -94,7 +93,6 @@ build()
     cp -r feature/languageselect/src build/outputs/oobe/source/feature/languageselect
     cp -r feature/otaservice/src build/outputs/oobe/source/feature/otaservice
     cp -r feature/regionselect/src build/outputs/oobe/source/feature/regionselect
-    cp -r feature/upgradeguide/src build/outputs/oobe/source/feature/upgradeguide
     cp -r feature/welcome/src build/outputs/oobe/source/feature/welcome
 
     echo "-----------------handle DTPipeline.zip--------------------"

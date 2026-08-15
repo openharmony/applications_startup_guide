@@ -18,10 +18,10 @@
       {
         "name": "default",
         "signingConfig": "default",
-        "compileSdkVersion": 23,
-        "compatibleSdkVersion": 20,
+        "compileSdkVersion": 26,
+        "compatibleSdkVersion": 23,
         "runtimeOS": "OpenHarmony",
-        "targetSdkVersion": 20
+        "targetSdkVersion": 23
       }
     ]
   },
@@ -65,10 +65,6 @@
     {
       "name": "hwstartupguide.welcome",
       "srcPath": "./feature/welcome",
-    },
-    {
-      "name": "hwstartupguide.upgradeguide",
-      "srcPath": "./feature/upgradeguide",
     },
     {
       "name": "hwstartupguide.otaservice",

@@ -31,7 +31,7 @@ import {
   ExperiencePageController,
 } from '@ohos/hwstartupguide.experience';
 import { WlanPageController } from './external/WlanPageController';
-import { LoadingPageController } from '@ohos/hwstartupguide.upgradeguide';
+import { LoadingPageController } from '@ohos/hwstartupguide.otaservice';
 
 /**
  * 页面控制器

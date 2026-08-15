@@ -14,3 +14,5 @@
  */
 
 export { ServiceStatementUtil } from './src/main/ets/util/ServiceStatementUtil';
+
+export { LoadingPageController } from './src/main/ets/controller/LoadingPageController';

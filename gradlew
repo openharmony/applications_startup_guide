@@ -89,7 +89,6 @@ function build() {
     ohpm_install "$PROJECT_PATH/feature/quicksetup"
     ohpm_install "$PROJECT_PATH/feature/basicservice"
     ohpm_install "$PROJECT_PATH/feature/enhanceservice"
-    ohpm_install "$PROJECT_PATH/feature/upgradeguide"
     ohpm_install "$PROJECT_PATH/feature/regionselect"
     ohpm_install "$PROJECT_PATH/feature/languageselect"
     ohpm_install "$PROJECT_PATH/feature/experience"

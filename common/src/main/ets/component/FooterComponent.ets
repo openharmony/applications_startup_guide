@@ -80,6 +80,10 @@ export struct FooterComponent {
       }
       .id(`button_footercomponent_${this.buttonName}`)
       .width(this.pageLayoutModel.isSpecialStyle ? this.pageLayoutModel.btnWidth : this.footBtnWidth)
+      .constraintSize({
+        minHeight: $r('app.float.height_40'),
+        maxHeight: $r('app.float.height_40')
+      })
       .padding({
         left: $r('app.float.margin_16'),
         right: $r('app.float.margin_16'),
@@ -89,6 +93,7 @@ export struct FooterComponent {
           this.footerStyleModel?.agreeBtnBottomMargin
       })
       .height($r('app.float.height_40'))
+      .controlSize(ControlSize.NORMAL)
       .backgroundColor($r('app.color.btn_color'))
       .type(this.footerStyleModel?.buttonType)
       .borderRadius(this.footerStyleModel?.buttonBorderRadius)
@@ -116,9 +121,14 @@ export struct FooterComponent {
       }
       .id(`text_footercomponent_${this.textName}`)
       .height($r('app.float.height_40'))
+      .constraintSize({
+        minHeight: $r('app.float.height_40'),
+        maxHeight: $r('app.float.height_40')
+      })
       .width(this.pageLayoutModel.isSpecialStyle ? this.pageLayoutModel.btnWidth : this.footBtnWidth)
       .align(Alignment.Center)
       .type(this.footerStyleModel?.buttonType)
+      .controlSize(ControlSize.NORMAL)
       .backgroundColor(!this.isFolded && this.pageLayoutModel.isSpecialStyle ?
         $r('sys.color.comp_background_tertiary') :
         Color.Transparent)

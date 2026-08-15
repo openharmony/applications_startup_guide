@@ -13,7 +13,6 @@
     "@ohos/hwstartupguide.experience": "file:../../feature/experience",
     "@ohos/hwstartupguide.welcome": "file:../../feature/welcome",
     "@ohos/hwstartupguide.regionselect": "file:../../feature/regionselect",
-    "@ohos/hwstartupguide.upgradeguide": "file:../../feature/upgradeguide",
     "@ohos/hwstartupguide.otaservice": "file:../../feature/otaservice"
   }
 }
