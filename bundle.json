@@ -1,0 +1,32 @@
+{
+  "name": "@ohos/applications_startup_guide",
+  "description": "Startup Guide (OOBE) app for standard system.",
+  "version": "3.0",
+  "license": "Apache License 2.0",
+  "publishAs": "code-segment",
+  "segment": {
+    "destPath": "applications/standard/startup_guide"
+  },
+  "dirs": {},
+  "scripts": {},
+  "component": {
+    "name": "applications_startup_guide",
+    "subsystem": "applications",
+    "syscap": [],
+    "features": [],
+    "adapted_system_type": [
+      "standard"
+    ],
+    "rom": "7644KB",
+    "ram": "80971KB",
+    "deps": {
+      "components": [],
+      "third_party": []
+    },
+    "build": {
+      "sub_component": [],
+      "inner_kits": [],
+      "test": []
+    }
+  }
+}

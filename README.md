@@ -364,6 +364,7 @@ startup guide
 │     ├─oobe_architecture.png            # startup guide 中文分层架构图
 │     └─oobe_architecture_en.png         # startup guide 英文分层架构图
 ├─hvigor                                # Hvigor 配置
+├─bundle.json                           # 部件描述文件
 ├─build.sh                              # 构建脚本
 ├─hvigorfile.ts                         # Hvigor 构建入口
 ├─README.md                             # 中文文档
