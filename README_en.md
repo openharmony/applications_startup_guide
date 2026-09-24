@@ -364,6 +364,7 @@ startup guide
 │     ├─oobe_architecture.png            # startup guide Chinese layered architecture diagram
 │     └─oobe_architecture_en.png         # startup guide English layered architecture diagram
 ├─hvigor                                # Hvigor configuration
+├─bundle.json                           # Component descriptor
 ├─build.sh                              # Build script
 ├─hvigorfile.ts                         # Hvigor build entry
 ├─README.md                             # Chinese documentation
